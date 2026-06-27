@@ -7,8 +7,8 @@ body { font-family: 'Lexend', sans-serif; }
 
 .hero-grad {
   background:
-    radial-gradient(120% 90% at 85% 10%, rgba(255, 255, 255, .55) 0%, rgba(255, 255, 255, 0) 40%),
-    linear-gradient(120deg, #0c7a4d 0%, #1f9d63 38%, #58c06f 62%, #cfeeb0 86%, #f4f9ee 100%);
+    radial-gradient(50% 70% at 74% 44%, rgba(236, 255, 240, .55) 0%, rgba(236, 255, 240, 0) 55%),
+    linear-gradient(116deg, #04415a 0%, #0b6f4d 38%, #239e60 64%, #6cc07b 100%);
 }
 .quote-grad { background: linear-gradient(100deg, #6d28d9 0%, #9333ea 30%, #db2777 60%, #f97316 100%); }
 .lime-btn {
@@ -17,7 +17,8 @@ body { font-family: 'Lexend', sans-serif; }
   box-shadow: 0 8px 20px -8px rgba(155, 203, 42, .7);
 }
 .lime-btn:hover { filter: brightness(1.04); }
-.feat-card { background: linear-gradient(180deg, #ffffff 0%, #fbf4ff 58%, #fdeaf6 100%); }
+.feat-card-pink { background: linear-gradient(180deg, #ffffff 0%, #fdf0f8 55%, #fbdcef 100%); }
+.feat-card-lav  { background: linear-gradient(180deg, #ffffff 0%, #f3f1fb 55%, #e7e6fa 100%); }
 .logo-wm { font-weight: 800; letter-spacing: .12em; }
 
 /* ---- react-slick (Latest Updates carousel) ---- */
