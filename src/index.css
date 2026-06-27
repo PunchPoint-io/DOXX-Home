@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+body { font-family: 'Lexend', sans-serif; }
+
+.hero-grad {
+  background:
+    radial-gradient(120% 90% at 85% 10%, rgba(255, 255, 255, .55) 0%, rgba(255, 255, 255, 0) 40%),
+    linear-gradient(120deg, #0c7a4d 0%, #1f9d63 38%, #58c06f 62%, #cfeeb0 86%, #f4f9ee 100%);
+}
+.quote-grad { background: linear-gradient(100deg, #6d28d9 0%, #9333ea 30%, #db2777 60%, #f97316 100%); }
+.lime-btn {
+  background: linear-gradient(180deg, #c4ec4e 0%, #a9d531 100%);
+  color: #15321a;
+  box-shadow: 0 8px 20px -8px rgba(155, 203, 42, .7);
+}
+.lime-btn:hover { filter: brightness(1.04); }
+.feat-card { background: linear-gradient(180deg, #ffffff 0%, #fbf4ff 58%, #fdeaf6 100%); }
+.logo-wm { font-weight: 800; letter-spacing: .12em; }
+
+/* ---- react-slick (Latest Updates carousel) ---- */
+.lu-slider .slick-list { margin: 0 -12px; }
+.lu-slider .slick-track { display: flex; }
+.lu-slider .slick-slide { height: auto; }
+.lu-slider .slick-slide > div { height: 100%; padding: 0 12px; }
+.lu-slider .slick-prev, .lu-slider .slick-next {
+  width: 44px; height: 44px; z-index: 20;
+}
+.lu-slider .slick-prev { left: -10px; }
+.lu-slider .slick-next { right: -10px; }
+.lu-slider .slick-prev:before, .lu-slider .slick-next:before { display: none; }
+
+.lu-dots {
+  display: flex; align-items: center; justify-content: center;
+  gap: 8px; margin-top: 32px; padding: 0; list-style: none;
+}
+.lu-dots li { width: auto; height: auto; margin: 0; }
+.lu-dots li span {
+  display: block; width: 8px; height: 6px; border-radius: 9999px;
+  background: rgba(136, 18, 254, .3); transition: all .3s ease;
+}
+.lu-dots li.slick-active span { width: 32px; background: #8812FE; }
