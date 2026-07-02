@@ -2,13 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Hubot Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url('/fonts/HubotSans-SemiBold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Hubot Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url('/fonts/HubotSans-ExtraBold.ttf') format('truetype');
+}
+
 html { scroll-behavior: smooth; }
 body { font-family: 'Lexend', sans-serif; }
 
 .hero-grad {
   background:
-    radial-gradient(50% 70% at 74% 44%, rgba(236, 255, 240, .55) 0%, rgba(236, 255, 240, 0) 55%),
-    linear-gradient(116deg, #04415a 0%, #0b6f4d 38%, #239e60 64%, #6cc07b 100%);
+    radial-gradient(65% 90% at 88% 42%, rgba(206, 222, 110, .85) 0%, rgba(206, 222, 110, .25) 40%, rgba(206, 222, 110, 0) 70%),
+    linear-gradient(150deg, #03354c 0%, #0c5a5c 30%, #1f8064 55%, #4ca06d 78%, #86bb78 100%);
 }
 .quote-grad { background: linear-gradient(100deg, #6d28d9 0%, #9333ea 30%, #db2777 60%, #f97316 100%); }
 .lime-btn {
@@ -19,23 +36,29 @@ body { font-family: 'Lexend', sans-serif; }
 .lime-btn:hover { filter: brightness(1.04); }
 .feat-card-pink { background: linear-gradient(180deg, #ffffff 0%, #fdf0f8 55%, #fbdcef 100%); }
 .feat-card-lav  { background: linear-gradient(180deg, #ffffff 0%, #f3f1fb 55%, #e7e6fa 100%); }
+.lu-cover { background: linear-gradient(150deg, #ece6fb 0%, #f4eef6 48%, #fbe9f2 100%); }
+.team-card { background: linear-gradient(160deg, #ffffff 0%, #f8f3fb 52%, #f7dcf1 100%); }
+.team-card--alt { background: linear-gradient(160deg, #ffffff 0%, #f5f3fc 55%, #ece4fb 100%); }
 .logo-wm { font-weight: 800; letter-spacing: .12em; }
 
 /* ---- react-slick (Latest Updates carousel) ---- */
+.lu-slider { padding-bottom: 72px; }
 .lu-slider .slick-list { margin: 0 -12px; }
 .lu-slider .slick-track { display: flex; }
 .lu-slider .slick-slide { height: auto; }
 .lu-slider .slick-slide > div { height: 100%; padding: 0 12px; }
 .lu-slider .slick-prev, .lu-slider .slick-next {
   width: 44px; height: 44px; z-index: 20;
+  top: auto; bottom: -58px; transform: none;
 }
-.lu-slider .slick-prev { left: -10px; }
-.lu-slider .slick-next { right: -10px; }
+.lu-slider .slick-prev { left: 0; }
+.lu-slider .slick-next { right: 0; }
 .lu-slider .slick-prev:before, .lu-slider .slick-next:before { display: none; }
 
 .lu-dots {
-  display: flex; align-items: center; justify-content: center;
-  gap: 8px; margin-top: 32px; padding: 0; list-style: none;
+  position: absolute; bottom: -42px; left: 0; right: 0;
+  display: flex !important; align-items: center; justify-content: center;
+  gap: 8px; margin: 0; padding: 0; list-style: none;
 }
 .lu-dots li { width: auto; height: auto; margin: 0; }
 .lu-dots li span {

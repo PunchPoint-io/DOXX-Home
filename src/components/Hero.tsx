@@ -2,9 +2,9 @@ export default function Hero() {
   return (
     <section className="hero-grad relative overflow-hidden">
       <div className="mx-auto max-w-wide px-6 lg:px-8 pt-36 pb-32 lg:pt-44 lg:pb-44">
-        <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-8 items-center">
-          <h1 className="font-display font-extrabold leading-[1.08] tracking-tight text-3xl sm:text-4xl lg:text-[3rem]">
-            <span className="block whitespace-nowrap text-[#e9ffd6]">Retail Digital Displays</span>
+        <div className="grid lg:grid-cols-[1.32fr_0.68fr] gap-8 items-center">
+          <h1 className="font-display font-semibold leading-none tracking-[-0.04em] text-4xl sm:text-5xl lg:text-[3.6rem]">
+            <span className="block whitespace-nowrap text-[#F3FFD4]">Retail Digital Displays</span>
             <span className="block whitespace-nowrap text-white">Content Management</span>
             <span className="block text-white">System</span>
           </h1>
