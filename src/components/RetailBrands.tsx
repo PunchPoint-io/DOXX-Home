@@ -57,22 +57,22 @@ export default function RetailBrands() {
         <div className="bg-white rounded-2xl ring-1 ring-black/[0.07] overflow-hidden pt-9 pb-8">
           <div className="flex items-start justify-between gap-6 px-6 lg:px-[3.5rem]">
             <div>
-              <h2 className="font-extrabold text-3xl sm:text-4xl lg:text-[2.6rem] leading-[0.95] tracking-[-0.03em] text-ink">Retail Brands</h2>
+              <h2 className="font-display font-extrabold [font-stretch:87%] text-3xl sm:text-4xl lg:text-[3.75rem] leading-[0.95] lg:leading-none text-ink">Retail Brands</h2>
               <p className="mt-2.5 text-violet-brand font-semibold text-base">Designed to attract attention. Built to drive engagement and sales.</p>
             </div>
-            <a href="#" className="shrink-0 mt-1 rounded-full bg-violet-brand text-white font-semibold text-sm px-8 py-3 hover:bg-violet-soft transition">Learn More</a>
+            <a href="#contact" className="shrink-0 mt-1 rounded-full bg-violet-brand text-white font-semibold text-sm px-8 py-3 hover:bg-violet-soft transition">Learn More</a>
           </div>
 
           <div className="mt-7 grid lg:grid-cols-[2.855fr_1fr] items-stretch">
-            <img src="/assets/retail.png" alt="DO-XX displays in retail outlets" className="w-full self-start select-none" />
+            <img src="/assets/retail.png" alt="DO-XX displays in retail outlets" loading="lazy" className="w-full self-start select-none" />
             <div className="px-6 lg:pl-[30px] lg:pr-[2.4rem] flex flex-col min-w-0">
               <div className="panel-slider flex-1 min-w-0">
                 <Slider ref={sliderRef} {...settings}>
                   {brands.map((b) => (
                     <div key={b.logo}>
-                      <img src={`/assets/${b.logo}`} alt="" className="h-[4.4rem] w-auto object-contain object-left" />
+                      <img src={`/assets/${b.logo}`} alt="" loading="lazy" className="h-[4.4rem] w-auto object-contain object-left" />
                       <div className="mt-3.5 border-t border-black/10" />
-                      <h3 className="mt-4 text-[2.15rem] leading-[1.06] font-extrabold tracking-tight text-ink whitespace-pre-line">{b.name}</h3>
+                      <h3 className="mt-4 font-display [font-stretch:87%] text-[2.15rem] lg:text-[2.5rem] leading-none font-extrabold text-ink whitespace-pre-line">{b.name}</h3>
                       <p className="mt-3.5 text-ink/70 leading-[1.55] text-[0.98rem]">{b.text}</p>
                     </div>
                   ))}

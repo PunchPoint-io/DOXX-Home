@@ -39,10 +39,10 @@ export default function Events() {
       <div className="bg-[#141414] text-white p-7 lg:p-12 overflow-hidden" style={{ backgroundImage: 'linear-gradient(115deg, #2e2e2e 0%, #191919 35%, #141414 100%)' }}>
         <div className="flex items-start justify-between flex-wrap gap-4">
           <div>
-            <h2 className="font-extrabold text-3xl sm:text-4xl tracking-tight">Events Management</h2>
+            <h2 className="font-display font-extrabold [font-stretch:87%] text-3xl sm:text-4xl lg:text-[3.75rem] lg:leading-none">Events Management</h2>
             <p className="mt-2 text-lime-brand font-medium text-sm">We design and deliver immersive brand experiences that demand attention.</p>
           </div>
-          <a href="#" className="lime-btn rounded-full text-sm font-bold px-6 py-3">Learn More</a>
+          <a href="#contact" className="lime-btn rounded-full text-sm font-bold px-6 py-3">Learn More</a>
         </div>
 
         <div className="panel-slider mt-8 min-w-0">
@@ -50,10 +50,10 @@ export default function Events() {
             {events.map((e) => (
               <div key={e.img}>
                 <div className="grid lg:grid-cols-[1.5fr_1fr] gap-8 items-center">
-                  <img src={`/assets/${e.img}`} alt={`DO-XX exhibition booth \u2014 ${e.title.replace('\n', ' ')}`} className="w-full object-cover" />
+                  <img src={`/assets/${e.img}`} alt={`DO-XX exhibition booth \u2014 ${e.title.replace('\n', ' ')}`} loading="lazy" className="w-full aspect-[1800/1192] object-cover" />
                   <div>
-                    <h3 className="text-2xl font-extrabold leading-tight whitespace-pre-line">{e.title}</h3>
-                    <p className="mt-2 text-lime-brand font-bold text-sm">{e.date}</p>
+                    <h3 className="font-display [font-stretch:87%] text-2xl lg:text-[2.5rem] font-extrabold leading-tight lg:leading-none whitespace-pre-line">{e.title}</h3>
+                    <p className="mt-2 text-lime-brand font-bold text-sm lg:text-lg">{e.date}</p>
                     <p className="mt-4 text-white/70 leading-relaxed text-sm">{e.text}</p>
                     <div className="mt-7 flex items-center gap-3">
                       <button

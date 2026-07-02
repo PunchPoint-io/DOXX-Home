@@ -12,7 +12,7 @@ export default function Team() {
     <section className="bg-lav border-b border-frame">
       <div className="px-6 lg:px-8 py-16 lg:py-20">
         <div className="flex items-start justify-between gap-4">
-          <h2 className="font-display font-extrabold text-4xl sm:text-5xl tracking-tight">The Team</h2>
+          <h2 className="font-display font-extrabold [font-stretch:87%] text-4xl lg:text-[3.75rem] lg:leading-none">The Team</h2>
           <img src="/assets/team-doxx-logo.png" alt="DO-XX Studio" className="h-12 w-auto mt-1 select-none" />
         </div>
 
@@ -29,6 +29,7 @@ export default function Team() {
                 <img
                   src={`/assets/team-${m.id}.png`}
                   alt={m.name}
+                  loading="lazy"
                   className="max-h-[250px] w-auto object-contain drop-shadow-sm"
                 />
               </div>
