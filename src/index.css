@@ -5,18 +5,10 @@
 @font-face {
   font-family: 'Hubot Sans';
   font-style: normal;
-  font-weight: 600;
-  font-stretch: 100%;
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
   font-display: swap;
-  src: url('/fonts/HubotSans-SemiBold.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Hubot Sans';
-  font-style: normal;
-  font-weight: 800;
-  font-stretch: 100%;
-  font-display: swap;
-  src: url('/fonts/HubotSans-ExtraBold.ttf') format('truetype');
+  src: url('/fonts/HubotSans-Variable.woff2') format('woff2-variations');
 }
 
 html { scroll-behavior: smooth; }
@@ -24,22 +16,33 @@ body { font-family: 'Lexend', sans-serif; }
 
 .hero-grad {
   background:
-    radial-gradient(65% 90% at 88% 42%, rgba(206, 222, 110, .85) 0%, rgba(206, 222, 110, .25) 40%, rgba(206, 222, 110, 0) 70%),
-    linear-gradient(150deg, #03354c 0%, #0c5a5c 30%, #1f8064 55%, #4ca06d 78%, #86bb78 100%);
+    radial-gradient(75% 110% at 100% 68%, rgba(236, 231, 135, 1) 0%, rgba(220, 226, 120, .5) 42%, rgba(206, 222, 110, 0) 70%),
+    linear-gradient(150deg, #034c5f 0%, #0c5a5c 28%, #1f8671 55%, #309d74 74%, #86bb78 100%);
 }
-.quote-grad { background: linear-gradient(100deg, #6d28d9 0%, #9333ea 30%, #db2777 60%, #f97316 100%); }
+.quote-grad { background: linear-gradient(100deg, #8f0dfe 0%, #9711fe 55%, #d63bd8 76%, #f460b3 88%, #ff8e3c 100%); }
+.quote-lines {
+  background: repeating-radial-gradient(circle at 88% 130%, transparent 0 34px, rgba(255, 255, 255, .12) 34px 36px);
+}
 .lime-btn {
   background: linear-gradient(180deg, #c4ec4e 0%, #a9d531 100%);
   color: #15321a;
   box-shadow: 0 8px 20px -8px rgba(155, 203, 42, .7);
 }
 .lime-btn:hover { filter: brightness(1.04); }
-.feat-card-pink { background: linear-gradient(180deg, #ffffff 0%, #fdf0f8 55%, #fbdcef 100%); }
-.feat-card-lav  { background: linear-gradient(180deg, #ffffff 0%, #f3f1fb 55%, #e7e6fa 100%); }
+.feat-card-pink { background: linear-gradient(180deg, #ffffff 0%, #fdeafc 55%, #fcd6fe 100%); }
+.feat-card-lav  { background: linear-gradient(180deg, #ffffff 0%, #f4f1fe 55%, #eee8fe 100%); }
 .lu-cover { background: linear-gradient(150deg, #ece6fb 0%, #f4eef6 48%, #fbe9f2 100%); }
 .team-card { background: linear-gradient(160deg, #ffffff 0%, #f8f3fb 52%, #f7dcf1 100%); }
 .team-card--alt { background: linear-gradient(160deg, #ffffff 0%, #f5f3fc 55%, #ece4fb 100%); }
 .logo-wm { font-weight: 800; letter-spacing: .12em; }
+
+.cb-marquee { animation: cb-scroll 40s linear infinite; }
+@keyframes cb-scroll { to { transform: translateX(-50%); } }
+
+/* ---- react-slick panel carousels (Retail Brands, Events) ---- */
+.panel-slider .slick-track { display: flex; }
+.panel-slider .slick-slide { height: auto; }
+.panel-slider .slick-slide > div { height: 100%; }
 
 /* ---- react-slick (Latest Updates carousel) ---- */
 .lu-slider { padding-bottom: 72px; }

@@ -18,18 +18,20 @@ export default function App() {
       <Header />
       <main>
         <Hero />
-        <ClientBar />
-        <Features />
-        <LatestUpdates />
-        <Products />
-        <RetailBrands />
-        <Events />
-        <QuoteBanner />
-        <ApacPartners />
-        <Team />
-        <FooterCTA />
+        <div className="mx-auto max-w-wide lg:border-x border-frame">
+          <ClientBar />
+          <Features />
+          <LatestUpdates />
+          <Products />
+          <RetailBrands />
+          <Events />
+          <QuoteBanner />
+          <ApacPartners />
+          <Team />
+          <FooterCTA />
+          <SiteFooter />
+        </div>
       </main>
-      <SiteFooter />
     </div>
   )
 }

@@ -1,10 +1,5 @@
-import SliderImport from 'react-slick'
-import type { Settings } from 'react-slick'
-
-// react-slick ships as CJS; under Vite's esbuild interop the default can arrive
-// wrapped as { default: Slider }. Unwrap so <Slider> is always the component.
-const Slider = ((SliderImport as unknown as { default?: typeof SliderImport })
-  .default ?? SliderImport) as typeof SliderImport
+import Slider from './slick'
+import type { Settings } from './slick'
 
 type Update = {
   logo: string
@@ -63,8 +58,8 @@ export default function LatestUpdates() {
   }
 
   return (
-    <section className="bg-[#f6f4fb]">
-      <div className="mx-auto max-w-wide px-6 lg:px-8 py-16 lg:py-20">
+    <section className="bg-white border-b border-frame">
+      <div className="px-6 lg:px-8 py-16 lg:py-20">
         <div className="flex items-center justify-between flex-wrap gap-4">
           <h2 className="font-display font-extrabold text-3xl sm:text-[2.5rem] tracking-tight flex items-center gap-3">
             <img src="/assets/ig-glyph.png" alt="" className="w-10 h-10" /> Latest Updates

@@ -1,20 +1,30 @@
 export default function ApacPartners() {
   return (
-    <section className="bg-white">
-      <div className="mx-auto max-w-wide px-6 lg:px-8 py-14 lg:py-20">
-        <span className="inline-block rounded-md bg-violet-brand text-white text-xs font-semibold px-3 py-1.5 [clip-path:polygon(0_0,100%_0,90%_100%,0_100%)] pr-5">Global presence</span>
-        <div className="mt-6 grid lg:grid-cols-2 gap-10 items-center">
-          <h2 className="font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-tight">
-            More than <span className="text-lime-deep">500+</span><br /> partnering brand<br /> outlets across <span className="text-lime-deep">Asia Pacific</span>
-          </h2>
-          <img src="/assets/countries.png" alt="DO-XX partner countries across Asia Pacific" className="w-full" />
-        </div>
-
-        <div className="mt-14">
-          <img src="/assets/partners.png" alt="Partner brand logos" className="w-full" />
-          <p className="mt-4 text-right text-violet-brand font-semibold text-sm">And many more!</p>
-        </div>
+    <section className="bg-[#FCFCFC] border-b border-frame overflow-hidden">
+      <div className="border-b border-frame pb-3.5">
+        <span
+          className="inline-block bg-violet-brand text-white text-lg lg:text-[26px] font-semibold pl-7 lg:pl-[3.8rem] pr-12 lg:pr-[3.4rem] py-5 lg:py-[2.1rem]"
+          style={{ clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%)' }}
+        >
+          Global presence
+        </span>
       </div>
+
+      <div className="pl-6 lg:pl-16 grid lg:grid-cols-[1fr_1.82fr] gap-6 items-start">
+        <h2
+          className="mt-8 lg:mt-[4.5rem] font-display font-extrabold text-3xl sm:text-4xl lg:text-[3.75rem] leading-[1.15] lg:leading-[0.93]"
+          style={{ fontStretch: '87%' }}
+        >
+          <span className="whitespace-nowrap">More than <span className="text-grass">500+</span></span><br />
+          <span className="whitespace-nowrap">partnering brand</span><br />
+          <span className="whitespace-nowrap">outlets across</span><br />
+          <span className="text-grass whitespace-nowrap">Asia Pacific</span>
+        </h2>
+        <img src="/assets/countries.png" alt="DO-XX partner countries across Asia Pacific" className="w-full" />
+      </div>
+
+      <img src="/assets/partners-grid.jpg" alt="Partner brand logos" className="w-full mt-2 lg:mt-8" />
+      <p className="mt-6 mb-10 pr-6 lg:pr-16 text-right text-violet-brand font-semibold text-[17px]">And many more!</p>
     </section>
   )
 }

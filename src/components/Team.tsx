@@ -9,8 +9,8 @@ const team: Member[] = [
 
 export default function Team() {
   return (
-    <section className="bg-white">
-      <div className="mx-auto max-w-wide px-6 lg:px-8 py-16 lg:py-20">
+    <section className="bg-lav border-b border-frame">
+      <div className="px-6 lg:px-8 py-16 lg:py-20">
         <div className="flex items-start justify-between gap-4">
           <h2 className="font-display font-extrabold text-4xl sm:text-5xl tracking-tight">The Team</h2>
           <img src="/assets/team-doxx-logo.png" alt="DO-XX Studio" className="h-12 w-auto mt-1 select-none" />

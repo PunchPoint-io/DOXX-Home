@@ -34,8 +34,8 @@ const features: Feature[] = [
 
 export default function Features() {
   return (
-    <section className="bg-white">
-      <div className="mx-auto max-w-wide px-6 lg:px-8 py-20 lg:py-24">
+    <section className="bg-white border-b border-frame">
+      <div className="px-6 lg:px-8 py-20 lg:py-24">
         <div className="flex items-center justify-center gap-4 sm:gap-5">
           <img src="/assets/mascot.png" alt="" className="w-20 sm:w-24 lg:w-28 shrink-0" />
           <h2 className="font-extrabold text-2xl sm:text-4xl lg:text-[2.7rem] tracking-tight leading-tight">
@@ -50,7 +50,7 @@ export default function Features() {
               <div className="px-7 pb-8 pt-6 flex flex-col flex-1">
                 <h3 className="text-[1.7rem] font-extrabold leading-tight tracking-tight">{f.title}</h3>
                 <p className="mt-4 text-[0.95rem] leading-relaxed text-ink/70">{f.body}</p>
-                <img src={`/assets/${f.img}`} alt="" className="mt-auto pt-6 h-44 object-contain mx-auto" />
+                <img src={`/assets/${f.img}`} alt="" className="mt-auto pt-6 h-52 object-contain mx-auto" />
               </div>
             </article>
           ))}
