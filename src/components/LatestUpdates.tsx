@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import Slider from './slick'
 import type { Settings } from './slick'
 
@@ -36,7 +37,22 @@ function Arrow({ dir, className, onClick }: ArrowProps) {
   )
 }
 
+// react-slick's `responsive` config breaks under React StrictMode (media
+// handlers are torn down by the double mount), so drive slidesToShow manually.
+function slidesForWidth() {
+  const w = window.innerWidth
+  return w < 640 ? 1 : w < 1024 ? 2 : w < 1280 ? 3 : 4
+}
+
 export default function LatestUpdates() {
+  const [slidesToShow, setSlidesToShow] = useState(slidesForWidth)
+
+  useEffect(() => {
+    const onResize = () => setSlidesToShow(slidesForWidth())
+    window.addEventListener('resize', onResize)
+    return () => window.removeEventListener('resize', onResize)
+  }, [])
+
   const settings: Settings = {
     dots: true,
     dotsClass: 'lu-dots',
@@ -46,15 +62,11 @@ export default function LatestUpdates() {
     autoplaySpeed: 3500,
     pauseOnHover: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow,
     slidesToScroll: 1,
+    arrows: slidesToShow > 1,
     prevArrow: <Arrow dir="prev" />,
     nextArrow: <Arrow dir="next" />,
-    responsive: [
-      { breakpoint: 1280, settings: { slidesToShow: 3 } },
-      { breakpoint: 1024, settings: { slidesToShow: 2 } },
-      { breakpoint: 640, settings: { slidesToShow: 1, arrows: false } },
-    ],
   }
 
   return (

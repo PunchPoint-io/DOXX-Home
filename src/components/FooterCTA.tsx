@@ -2,10 +2,10 @@ export default function FooterCTA() {
   return (
     <section id="contact" className="bg-white">
       <div className="grid lg:grid-cols-[2.9fr_1.1fr] items-stretch">
-        <div className="flex items-center justify-center gap-5 sm:gap-8 px-6 py-16 lg:py-24">
-          <img src="/assets/mascot-smile.png" alt="" className="w-48 sm:w-56 shrink-0 select-none" />
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-8 px-6 py-16 lg:py-24 text-center sm:text-left">
+          <img src="/assets/mascot-smile.png" alt="" className="w-40 sm:w-56 shrink-0 select-none" />
           <div>
-            <p className="font-display font-extrabold text-[1.7rem] sm:text-[2rem] leading-[1.15] tracking-tight">
+            <p className="font-display font-extrabold text-2xl sm:text-[2rem] leading-[1.15] tracking-tight">
               <span className="text-grass">We</span> Discuss • Talk • Listen •<br />
               Collaborate • Partner • Hire<br />
               <span className="text-grass">Do You?</span>
