@@ -14,7 +14,7 @@ import SiteFooter from './components/SiteFooter'
 
 export default function App() {
   return (
-    <div className="bg-white text-ink antialiased">
+    <div className="bg-white text-ink antialiased overflow-x-clip">
       <Header />
       <main>
         <Hero />
