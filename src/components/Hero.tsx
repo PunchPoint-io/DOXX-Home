@@ -8,7 +8,7 @@ export default function Hero() {
             <span className="block whitespace-nowrap text-white">Content Management</span>
             <span className="block text-white">System</span>
           </h1>
-          <div className="relative z-10 flex justify-center lg:justify-end lg:translate-y-6 lg:-mr-24">
+          <div className="relative z-10 flex justify-center lg:justify-end lg:translate-y-0 lg:-mr-24">
             <div className="relative">
               <img src="/assets/mascot-front.png" alt="DO-XX mascot" className="relative z-10 w-56 sm:w-72 lg:w-[40rem] select-none" />
               <div className="absolute left-1/2 -translate-x-1/2 bottom-1 lg:bottom-2 w-3/4 h-6 rounded-[50%] bg-black/25 blur-md" />
