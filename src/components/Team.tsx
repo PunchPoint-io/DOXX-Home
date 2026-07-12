@@ -12,7 +12,7 @@ export default function Team() {
     <section className="bg-lav border-b border-frame">
       <div className="px-6 lg:px-8 py-16 lg:py-20">
         <div className="flex items-start justify-between gap-4">
-          <h2 className="font-display font-extrabold [font-stretch:87%] text-4xl lg:text-[3.75rem] lg:leading-none">The Team</h2>
+          <h2 className="font-display font-medium tracking-[-0.045em] text-4xl lg:text-[3.75rem] lg:leading-none">The Team</h2>
           <img src="/assets/team-doxx-logo.png" alt="DO-XX Studio" className="h-12 w-auto mt-1 select-none" />
         </div>
 
@@ -23,17 +23,17 @@ export default function Team() {
               className={`${m.alt ? 'team-card--alt' : 'team-card'} relative rounded-2xl overflow-hidden ring-1 ring-black/[0.05] shadow-sm flex flex-col min-h-[420px]`}
             >
               <div className="self-start bg-[#ABDCE0] pl-6 pr-12 py-3 [clip-path:polygon(0_0,100%_0,84%_100%,0_100%)]">
-                <span className="font-display font-extrabold text-xl sm:text-2xl text-ink">{m.name}</span>
+                <span className="font-display font-semibold text-2xl sm:text-[1.75rem] text-ink">{m.name}</span>
               </div>
-              <div className="flex-1 flex items-center justify-center px-5 py-6">
+              <div className="flex-1 flex items-center justify-center px-6 py-7">
                 <img
                   src={`/assets/team-${m.id}.png`}
                   alt={m.name}
                   loading="lazy"
-                  className="max-h-[250px] w-auto object-contain drop-shadow-sm"
+                  className="max-h-[285px] w-auto object-contain drop-shadow-sm"
                 />
               </div>
-              <p className="text-center font-semibold text-ink/90 text-[0.95rem] pb-7 px-4">{m.tagline}</p>
+              <p className="text-center font-medium text-ink/90 text-base pb-8 px-4">{m.tagline}</p>
             </article>
           ))}
         </div>

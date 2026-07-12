@@ -3,15 +3,15 @@ export default function ApacPartners() {
     <section className="bg-[#FCFCFC] border-b border-frame">
       <div className="border-b border-frame pb-3.5">
         <span
-          className="inline-block bg-violet-brand text-white text-lg font-semibold pl-7 lg:pl-[3.75rem] pr-12 lg:pr-[7.5rem] py-5 lg:py-9 lg:min-w-[360px]"
-          style={{ clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%)' }}
+          className="inline-block bg-violet-brand text-white text-lg font-semibold px-7 lg:px-8 py-3 lg:py-3.5"
+          style={{ clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%)' }}
         >
           Global presence
         </span>
       </div>
 
       <div className="pl-6 lg:pl-16 grid lg:grid-cols-[1fr_1.82fr] gap-6 items-start">
-        <h2 className="mt-8 lg:mt-[3.7rem] font-display font-extrabold [font-stretch:87%] text-3xl sm:text-4xl lg:text-[2.75rem] xl:text-[3.75rem] leading-[1.15] xl:leading-none">
+        <h2 className="mt-8 lg:mt-[3.7rem] font-display font-medium tracking-[-0.045em] text-3xl sm:text-4xl lg:text-[2.75rem] xl:text-[3.75rem] leading-[1.15] xl:leading-none">
           <span className="whitespace-nowrap">More than <span className="text-grass">500+</span></span><br />
           <span className="whitespace-nowrap">partnering brand</span><br />
           <span className="whitespace-nowrap">outlets across</span><br />

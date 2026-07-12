@@ -38,19 +38,19 @@ export default function Features() {
       <div className="px-6 lg:px-8 py-20 lg:py-24">
         <div className="flex items-center justify-center gap-4 sm:gap-5">
           <img src="/assets/mascot.png" alt="" className="w-20 sm:w-24 lg:w-28 shrink-0" />
-          <h2 className="font-display font-extrabold [font-stretch:87%] text-2xl sm:text-4xl lg:text-[3.4375rem] leading-tight lg:leading-none">
+          <h2 className="font-display font-medium tracking-[-0.045em] text-2xl sm:text-4xl lg:text-[3.4375rem] leading-tight lg:leading-none">
             Unlock <span className="text-grass">Unlimited Marketing Possibilities</span>
           </h2>
         </div>
 
-        <div className="mt-14 grid md:grid-cols-3 gap-6">
+        <div className="mt-16 grid md:grid-cols-3 gap-6">
           {features.map((f) => (
-            <article key={f.tag} className={`${f.bg} relative rounded-3xl ring-1 ring-black/5 overflow-hidden flex flex-col min-h-[460px]`}>
-              <span className="self-start bg-violet-brand text-white text-base font-semibold pl-5 pr-9 py-2.5 [clip-path:polygon(0_0,100%_0,84%_100%,0_100%)]">{f.tag}</span>
-              <div className="px-7 pb-8 pt-6 flex flex-col flex-1">
-                <h3 className="text-[1.7rem] font-extrabold leading-tight tracking-tight">{f.title}</h3>
-                <p className="mt-4 text-[0.95rem] leading-relaxed text-ink/70">{f.body}</p>
-                <img src={`/assets/${f.img}`} alt="" loading="lazy" className="mt-auto pt-6 h-52 object-contain mx-auto" />
+            <article key={f.tag} className={`${f.bg} relative rounded-3xl ring-1 ring-black/5 overflow-hidden flex flex-col min-h-[470px]`}>
+              <span className="self-start bg-violet-brand text-white text-lg font-normal pl-5 pr-9 py-2.5 [clip-path:polygon(0_0,100%_0,84%_100%,0_100%)]">{f.tag}</span>
+              <div className="px-8 pb-9 pt-7 flex flex-col flex-1">
+                <h3 className="font-display text-[2.25rem] font-medium leading-[1.05] tracking-[-0.03em]">{f.title}</h3>
+                <p className="mt-4 font-light text-lg leading-[1.5] text-ink/70">{f.body}</p>
+                <img src={`/assets/${f.img}`} alt="" loading="lazy" className="mt-auto pt-6 h-60 object-contain mx-auto" />
               </div>
             </article>
           ))}
