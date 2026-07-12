@@ -60,8 +60,8 @@ export default function Events() {
   }
 
   return (
-    <section className="bg-white border-b border-frame">
-      <div className="bg-[#141414] text-white p-7 lg:p-12 overflow-hidden" style={{ backgroundImage: 'linear-gradient(115deg, #2e2e2e 0%, #191919 35%, #141414 100%)' }}>
+    <section className="bg-white border-b border-frame px-4 sm:px-6 lg:px-10 py-4 lg:py-6">
+      <div className="rounded-[28px] lg:rounded-[40px] bg-[#141414] text-white p-7 lg:p-12 overflow-hidden" style={{ backgroundImage: 'linear-gradient(115deg, #2e2e2e 0%, #191919 35%, #141414 100%)' }}>
         <div className="flex items-start justify-between flex-wrap gap-4">
           <div>
             <h2 className="font-display font-medium tracking-[-0.045em] text-3xl sm:text-4xl lg:text-[3.75rem] lg:leading-none">Events Management</h2>
@@ -85,7 +85,7 @@ export default function Events() {
                         type="button"
                         disabled={idx === 0}
                         onClick={() => sliderRef.current?.slickPrev()}
-                        className={`rounded-full text-sm font-semibold px-6 py-2.5 transition ${idx === 0 ? 'bg-[#3a3a3a] text-white/45 cursor-default' : 'ring-1 ring-white/35 text-white hover:bg-white/10'}`}
+                        className="rounded-full text-sm font-semibold px-6 py-2.5 ring-1 ring-white/40 text-white transition hover:bg-white/10 disabled:opacity-40 disabled:hover:bg-transparent"
                       >
                         Previous
                       </button>
@@ -93,7 +93,7 @@ export default function Events() {
                         type="button"
                         disabled={idx === last}
                         onClick={() => sliderRef.current?.slickNext()}
-                        className={`rounded-full text-sm font-semibold px-7 py-2.5 transition ${idx === last ? 'bg-[#3a3a3a] text-white/45 cursor-default' : 'ring-1 ring-lime-brand text-white hover:bg-lime-brand/10'}`}
+                        className={`rounded-full text-sm font-semibold px-7 py-2.5 transition ${idx === last ? 'bg-[#3a3a3a] text-white/45 cursor-default' : 'lime-btn hover:brightness-105'}`}
                       >
                         Next
                       </button>

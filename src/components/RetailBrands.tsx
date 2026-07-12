@@ -119,7 +119,7 @@ export default function RetailBrands() {
                 <button
                   type="button"
                   onClick={() => sliderRef.current?.slickNext()}
-                  className="rounded-full ring-1 ring-violet-brand text-violet-brand text-sm font-semibold px-8 py-2 hover:bg-violet-brand/5 transition"
+                  className="rounded-full bg-violet-brand text-white text-sm font-semibold px-8 py-2 hover:bg-violet-soft transition"
                 >
                   Next
                 </button>
