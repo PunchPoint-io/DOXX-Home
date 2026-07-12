@@ -20,12 +20,17 @@ export default function ApacPartners() {
         <img src="/assets/countries.png" alt="DO-XX partner countries across Asia Pacific" loading="lazy" className="w-full" />
       </div>
 
-      <img
-        src="/assets/partners-grid.jpg"
-        alt="Partner brand logos"
-        loading="lazy"
-        className="relative left-1/2 -translate-x-1/2 w-screen max-w-none mt-2"
-      />
+      {/* Design shows logos at a fixed size bleeding off the right edge (grid spans
+          x120–x2300 in the 1920 frame). Hold that scale via min-width + clip instead
+          of squeezing every column into narrow viewports. */}
+      <div className="mt-2 overflow-hidden">
+        <img
+          src="/assets/partners-grid.jpg"
+          alt="Partner brand logos"
+          loading="lazy"
+          className="w-full min-w-[1680px] max-w-none"
+        />
+      </div>
       <p className="mt-7 lg:mt-10 mb-10 pr-6 lg:pr-16 text-right text-violet-brand font-semibold text-[17px]">And many more!</p>
     </section>
   )
