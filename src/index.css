@@ -19,9 +19,13 @@ body { font-family: 'Lexend', sans-serif; }
     radial-gradient(88% 120% at 90% 92%, rgba(238, 233, 138, 1) 0%, rgba(222, 228, 120, .55) 40%, rgba(206, 222, 110, 0) 72%),
     linear-gradient(150deg, #034c5f 0%, #0c5a5c 26%, #1f8671 52%, #3ba375 72%, #93c56f 100%);
 }
-.quote-grad { background: linear-gradient(100deg, #8f0dfe 0%, #9711fe 55%, #d63bd8 76%, #f460b3 88%, #ff8e3c 100%); }
+.quote-grad { background: linear-gradient(100deg, #8f0dfe 0%, #9a13fb 48%, #d31f9e 72%, #ee2f56 88%, #ff7e3a 100%); }
 .quote-lines {
-  background: repeating-radial-gradient(circle at 88% 130%, transparent 0 34px, rgba(255, 255, 255, .12) 34px 36px);
+  /* Design draws ~30 vertical strands, denser toward the right edge. Approximate with
+     evenly spaced vertical lines masked to fade in from the left. */
+  background: repeating-linear-gradient(90deg, transparent 0 15px, rgba(255, 255, 255, .16) 15px 17px);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 55%, #000 100%);
+  mask-image: linear-gradient(to right, transparent 0%, #000 55%, #000 100%);
 }
 .lime-btn {
   background: linear-gradient(180deg, #c4ec4e 0%, #a9d531 100%);
