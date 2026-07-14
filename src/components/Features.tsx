@@ -37,7 +37,7 @@ export default function Features() {
     <section className="bg-white border-b border-frame">
       <div className="px-6 lg:px-8 py-20 lg:py-24">
         <div className="flex items-center justify-center gap-4 sm:gap-5">
-          <img src="/assets/mascot.png" alt="" className="w-20 sm:w-24 lg:w-28 shrink-0" />
+          <img src="/assets/mascot.png" alt="" className="w-28 sm:w-44 lg:w-56 shrink-0" />
           <h2 className="font-display font-medium tracking-[-0.045em] text-2xl sm:text-4xl lg:text-[3.4375rem] leading-tight lg:leading-none">
             Unlock <span className="text-grass">Unlimited Marketing Possibilities</span>
           </h2>
