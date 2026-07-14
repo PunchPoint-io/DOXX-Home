@@ -5,22 +5,23 @@ import type { Settings, SliderInstance } from './slick'
 type Brand = { collage: string; logo: string; name: string; text: string }
 
 // Slide content + galleries pulled from the DOXX Figma (Section "Updated Website",
-// per-brand IMAGES-* frames). Order matches the design's 8 pagination dots.
+// per-brand IMAGES-* frames). Springleaf Prata Place leads the carousel to match
+// the design's default slide; the remaining brands follow.
 const brands: Brand[] = [
-  {
-    // NOTE: Figma slide 1 pairs a "Yew Kee Group" paragraph with Chicha San Chen
-    // logo + photos. Logo/gallery (and the hero client bar) say Chicha San Chen,
-    // so we use that. Client to confirm final copy for this slide.
-    collage: 'rb-yewkee.png',
-    logo: 'logo-yewkee.png',
-    name: 'Chicha\nSan Chen',
-    text: 'Chicha San Chen is a premium Taiwanese tea brand serving freshly brewed, made-to-order teas, bringing authentic tea culture and a modern in-store experience to outlets across Singapore.',
-  },
   {
     collage: 'rb-springleaf.png',
     logo: 'logo-springleaf2.png',
     name: 'Springleaf\nPrata Place',
     text: 'Founded in 2003, Springleaf Prata Place is a renowned halal Indian restaurant brand in Singapore, famous for the innovative prata creations such as Ultimate Murtabak, Murtaburger, and authentic South Indian cuisine.',
+  },
+  {
+    // NOTE: Figma pairs a "Yew Kee Group" paragraph with Chicha San Chen logo +
+    // photos. Logo/gallery (and the hero client bar) say Chicha San Chen, so we
+    // use that. Client to confirm final copy for this slide.
+    collage: 'rb-yewkee.png',
+    logo: 'logo-yewkee.png',
+    name: 'Chicha\nSan Chen',
+    text: 'Chicha San Chen is a premium Taiwanese tea brand serving freshly brewed, made-to-order teas, bringing authentic tea culture and a modern in-store experience to outlets across Singapore.',
   },
   {
     collage: 'rb-sushi.png',
