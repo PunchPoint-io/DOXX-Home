@@ -43,14 +43,14 @@ export default function Features() {
           </h2>
         </div>
 
-        <div className="mt-16 grid md:grid-cols-3 gap-6">
+        <div className="mt-20 grid md:grid-cols-3 gap-6">
           {features.map((f) => (
-            <article key={f.tag} className={`${f.bg} relative rounded-3xl ring-1 ring-black/5 overflow-hidden flex flex-col min-h-[470px]`}>
+            <article key={f.tag} className={`${f.bg} relative rounded-3xl ring-1 ring-black/5 overflow-hidden flex flex-col min-h-[510px]`}>
               <span className="self-start bg-violet-brand text-white text-lg font-normal pl-5 pr-9 py-2.5 [clip-path:polygon(0_0,100%_0,84%_100%,0_100%)]">{f.tag}</span>
-              <div className="px-8 pb-9 pt-7 flex flex-col flex-1">
+              <div className="px-9 pb-10 pt-8 flex flex-col flex-1">
                 <h3 className="font-display text-[2.25rem] font-medium leading-[1.05] tracking-[-0.03em]">{f.title}</h3>
                 <p className="mt-4 font-light text-lg leading-[1.5] text-ink/70">{f.body}</p>
-                <img src={`/assets/${f.img}`} alt="" loading="lazy" className="mt-auto pt-6 h-60 object-contain mx-auto" />
+                <img src={`/assets/${f.img}`} alt="" loading="lazy" className="mt-auto pt-8 h-64 object-contain mx-auto" />
               </div>
             </article>
           ))}

@@ -101,10 +101,10 @@ export default function RetailBrands() {
                 <Slider ref={sliderRef} {...settings}>
                   {brands.map((b) => (
                     <div key={b.collage}>
-                      <img src={`/assets/${b.logo}`} alt="" loading="lazy" className="h-[4.4rem] w-auto max-w-[15rem] object-contain object-left" />
-                      <div className="mt-3.5 border-t border-black/10" />
-                      <h3 className="mt-4 font-display tracking-[-0.03em] text-[2.15rem] lg:text-[2.5rem] leading-none font-semibold text-ink whitespace-pre-line">{b.name}</h3>
-                      <p className="mt-3.5 font-light text-ink/70 leading-[1.6] text-base">{b.text}</p>
+                      <img src={`/assets/${b.logo}`} alt="" loading="lazy" className="h-16 w-auto max-w-[13rem] object-contain object-left" />
+                      <div className="mt-5 border-t border-black/10" />
+                      <h3 className="mt-5 font-display tracking-[-0.03em] text-[2rem] lg:text-[2.4rem] leading-none font-semibold text-ink whitespace-pre-line">{b.name}</h3>
+                      <p className="mt-4 font-light text-ink/70 leading-[1.65] text-[0.9375rem]">{b.text}</p>
                     </div>
                   ))}
                 </Slider>
@@ -113,26 +113,26 @@ export default function RetailBrands() {
                 <button
                   type="button"
                   onClick={() => sliderRef.current?.slickPrev()}
-                  className="rounded-full ring-1 ring-violet-brand text-violet-brand text-sm font-semibold px-6 py-2 hover:bg-violet-brand/5 transition"
+                  className="rounded-full ring-1 ring-violet-brand text-violet-brand text-sm font-semibold px-7 py-2.5 hover:bg-violet-brand/5 transition"
                 >
                   Previous
                 </button>
                 <button
                   type="button"
                   onClick={() => sliderRef.current?.slickNext()}
-                  className="rounded-full bg-violet-brand text-white text-sm font-semibold px-8 py-2 hover:bg-violet-soft transition"
+                  className="rounded-full bg-violet-brand text-white text-sm font-semibold px-9 py-2.5 hover:bg-violet-soft transition"
                 >
                   Next
                 </button>
               </div>
-              <div className="mt-5 flex items-center gap-1.5">
+              <div className="mt-4 flex items-center gap-2">
                 {brands.map((b, i) => (
                   <button
                     key={b.collage}
                     type="button"
                     aria-label={`Go to ${b.name.split('\n')[0]}`}
                     onClick={() => sliderRef.current?.slickGoTo(i)}
-                    className={`h-1 rounded-full transition-all duration-300 ${i === idx ? 'w-7 bg-grass' : 'w-5 bg-black/15 hover:bg-black/30'}`}
+                    className={`h-[3px] rounded-full transition-all duration-300 ${i === idx ? 'w-8 bg-grass' : 'w-5 bg-black/15 hover:bg-black/30'}`}
                   />
                 ))}
               </div>
