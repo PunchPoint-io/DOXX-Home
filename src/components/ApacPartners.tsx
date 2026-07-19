@@ -1,3 +1,11 @@
+const ROWS = [
+  { src: '/assets/partners-row-2.jpg', dir: 'rtl', h: 48 },
+  { src: '/assets/partners-row-3.jpg', dir: 'ltr', h: 51 },
+  { src: '/assets/partners-row-4.jpg', dir: 'rtl', h: 50 },
+  { src: '/assets/partners-row-5.jpg', dir: 'ltr', h: 52 },
+  { src: '/assets/partners-row-6.jpg', dir: 'rtl', h: 48 },
+]
+
 export default function ApacPartners() {
   return (
     <section className="bg-[#FCFCFC] border-b border-frame">
@@ -20,17 +28,17 @@ export default function ApacPartners() {
         <img src="/assets/countries.png" alt="DO-XX partner countries across Asia Pacific" loading="lazy" className="w-full" />
       </div>
 
-      {/* Design shows logos at a fixed size bleeding off the right edge (grid spans
-          x120–x2300 in the 1920 frame). Hold that scale via min-width + clip instead
-          of squeezing every column into narrow viewports. */}
-      <div className="mt-2 overflow-hidden">
-        <img
-          src="/assets/partners-grid.jpg"
-          alt="Partner brand logos"
-          loading="lazy"
-          className="w-full min-w-[1680px] max-w-none"
-        />
+      <div className="mt-6 lg:mt-10 flex flex-col gap-3">
+        {ROWS.map(({ src, dir, h }) => (
+          <div key={src} className="overflow-hidden">
+            <div className={`${dir === 'rtl' ? 'ap-rtl' : 'ap-ltr'} flex w-max`}>
+              <img src={src} alt="" aria-hidden loading="lazy" style={{ height: `${h}px`, width: 'auto', flexShrink: 0 }} />
+              <img src={src} alt="" aria-hidden loading="lazy" style={{ height: `${h}px`, width: 'auto', flexShrink: 0 }} />
+            </div>
+          </div>
+        ))}
       </div>
+
       <p className="mt-7 lg:mt-10 mb-10 pr-6 lg:pr-16 text-right text-violet-brand font-semibold text-[17px]">And many more!</p>
     </section>
   )
