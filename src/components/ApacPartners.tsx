@@ -31,7 +31,7 @@ export default function ApacPartners() {
       <div className="mt-6 lg:mt-10 flex flex-col gap-3">
         {ROWS.map(({ src, h }) => (
           <div key={src} className="overflow-hidden">
-            <img src={src} alt="" aria-hidden loading="lazy" style={{ height: `${h}px`, width: 'auto' }} />
+            <img src={src} alt="" aria-hidden loading="lazy" className="w-full h-auto" />
           </div>
         ))}
       </div>
