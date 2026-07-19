@@ -43,14 +43,12 @@ body { font-family: 'Lexend', sans-serif; }
 .cb-marquee { animation: cb-scroll 40s linear infinite; }
 @keyframes cb-scroll { to { transform: translateX(-50%); } }
 
-/* Partner logo marquee rows */
+/* Partner logo marquee rows — same direction as ClientBar */
 .ap-rtl { animation: ap-scroll-rtl 65s linear infinite; }
-.ap-ltr { animation: ap-scroll-ltr 65s linear infinite; }
 @keyframes ap-scroll-rtl { to { transform: translateX(-50%); } }
-@keyframes ap-scroll-ltr { from { transform: translateX(-50%); } to { transform: translateX(0); } }
 
 @media (prefers-reduced-motion: reduce) {
-  .cb-marquee, .ap-rtl, .ap-ltr { animation: none; }
+  .cb-marquee, .ap-rtl { animation: none; }
 }
 
 /* ---- react-slick panel carousels (Retail Brands, Events) ---- */

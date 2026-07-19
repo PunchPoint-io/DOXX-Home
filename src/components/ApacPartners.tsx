@@ -1,9 +1,9 @@
 const ROWS = [
-  { src: '/assets/partners-row-2.jpg', dir: 'rtl', h: 48 },
-  { src: '/assets/partners-row-3.jpg', dir: 'ltr', h: 51 },
-  { src: '/assets/partners-row-4.jpg', dir: 'rtl', h: 50 },
-  { src: '/assets/partners-row-5.jpg', dir: 'ltr', h: 52 },
-  { src: '/assets/partners-row-6.jpg', dir: 'rtl', h: 48 },
+  { src: '/assets/partners-row-2.jpg', h: 48 },
+  { src: '/assets/partners-row-3.jpg', h: 51 },
+  { src: '/assets/partners-row-4.jpg', h: 50 },
+  { src: '/assets/partners-row-5.jpg', h: 52 },
+  { src: '/assets/partners-row-6.jpg', h: 48 },
 ]
 
 export default function ApacPartners() {
@@ -29,9 +29,9 @@ export default function ApacPartners() {
       </div>
 
       <div className="mt-6 lg:mt-10 flex flex-col gap-3">
-        {ROWS.map(({ src, dir, h }) => (
+        {ROWS.map(({ src, h }) => (
           <div key={src} className="overflow-hidden">
-            <div className={`${dir === 'rtl' ? 'ap-rtl' : 'ap-ltr'} flex w-max`}>
+            <div className="ap-rtl flex w-max">
               <img src={src} alt="" aria-hidden loading="lazy" style={{ height: `${h}px`, width: 'auto', flexShrink: 0 }} />
               <img src={src} alt="" aria-hidden loading="lazy" style={{ height: `${h}px`, width: 'auto', flexShrink: 0 }} />
             </div>
