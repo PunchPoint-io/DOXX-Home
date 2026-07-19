@@ -43,12 +43,8 @@ body { font-family: 'Lexend', sans-serif; }
 .cb-marquee { animation: cb-scroll 40s linear infinite; }
 @keyframes cb-scroll { to { transform: translateX(-50%); } }
 
-/* Partner logo marquee rows — same direction as ClientBar */
-.ap-rtl { animation: ap-scroll-rtl 65s linear infinite; }
-@keyframes ap-scroll-rtl { to { transform: translateX(-50%); } }
-
 @media (prefers-reduced-motion: reduce) {
-  .cb-marquee, .ap-rtl { animation: none; }
+  .cb-marquee { animation: none; }
 }
 
 /* ---- react-slick panel carousels (Retail Brands, Events) ---- */
