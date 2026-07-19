@@ -1,9 +1,9 @@
 const ROWS = [
-  { src: '/assets/partners-row-2.jpg', h: 48 },
-  { src: '/assets/partners-row-3.jpg', h: 51 },
-  { src: '/assets/partners-row-4.jpg', h: 50 },
-  { src: '/assets/partners-row-5.jpg', h: 52 },
-  { src: '/assets/partners-row-6.jpg', h: 48 },
+  '/assets/partners-row-2.jpg',
+  '/assets/partners-row-3.jpg',
+  '/assets/partners-row-4.jpg',
+  '/assets/partners-row-5.jpg',
+  '/assets/partners-row-6.jpg',
 ]
 
 export default function ApacPartners() {
@@ -29,8 +29,8 @@ export default function ApacPartners() {
       </div>
 
       <div className="mt-6 lg:mt-10 flex flex-col gap-3">
-        {ROWS.map(({ src, h }) => (
-          <div key={src} className="overflow-hidden">
+        {ROWS.map((src) => (
+          <div key={src}>
             <img src={src} alt="" aria-hidden loading="lazy" className="w-full h-auto" />
           </div>
         ))}
