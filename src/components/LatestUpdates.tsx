@@ -73,7 +73,7 @@ export default function LatestUpdates() {
     <section className="bg-white border-b border-frame">
       <div className="px-6 lg:px-8 py-16 lg:py-20">
         <div className="flex items-center justify-between flex-wrap gap-4">
-          <h2 className="font-display font-extrabold [font-stretch:87%] text-3xl sm:text-[2.5rem] leading-none flex items-center gap-3">
+          <h2 className="font-display font-semibold tracking-[-0.03em] text-3xl sm:text-[2.5rem] leading-none flex items-center gap-3">
             <img src="/assets/ig-glyph.png" alt="" className="w-10 h-10" /> Latest Updates
           </h2>
           <div className="flex items-center gap-3">
@@ -87,17 +87,17 @@ export default function LatestUpdates() {
             {updates.map((u) => (
               <div key={u.category}>
                 <article className="h-full rounded-2xl bg-white ring-1 ring-black/[0.07] overflow-hidden shadow-sm flex flex-col">
-                  <div className={`relative aspect-square flex items-center justify-center p-8 ${u.cover ? 'lu-cover' : 'bg-white'}`}>
+                  <div className={`relative aspect-[4/3] flex items-center justify-center p-7 ${u.cover ? 'lu-cover' : 'bg-white'}`}>
                     <img src={`/assets/${u.logo}`} alt={u.category} loading="lazy" className="max-h-full max-w-full object-contain" />
                     {u.tag && (
                       <span className="absolute left-0 bottom-5 bg-violet-brand text-white text-[13px] font-semibold pl-4 pr-7 py-1.5 [clip-path:polygon(0_0,100%_0,84%_100%,0_100%)]">{u.category}</span>
                     )}
                   </div>
-                  <div className="px-5 pt-5 pb-5 flex flex-col flex-1 border-t border-black/[0.06]">
-                    <p className="text-[0.95rem] text-ink/80 leading-relaxed">{u.text}</p>
-                    <div className="mt-auto pt-6 flex items-center justify-between text-sm">
-                      <span className="text-ink/40">{u.date}</span>
-                      <a href="https://www.instagram.com/doxx_studio/" target="_blank" rel="noopener noreferrer" className="font-semibold text-violet-brand hover:underline">View post</a>
+                  <div className="px-5 pt-5 pb-6 flex flex-col flex-1 border-t border-black/[0.06]">
+                    <p className="font-light text-sm text-ink/80 leading-[1.6]">{u.text}</p>
+                    <div className="mt-auto pt-5 flex items-center justify-between">
+                      <span className="text-xs text-ink/40">{u.date}</span>
+                      <a href="https://www.instagram.com/doxx_studio/" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-violet-brand hover:underline">View post</a>
                     </div>
                   </div>
                 </article>
