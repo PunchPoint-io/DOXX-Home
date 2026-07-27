@@ -10,12 +10,12 @@ export default function Hero() {
             <span className="block text-white">System</span>
           </h1>
           {/* z-20 keeps the mascot above the white wedge, which it overlaps in the design. */}
-          <div className="relative z-20 flex justify-center lg:justify-end frame:absolute frame:right-[-13px] frame:top-[229px] frame:w-[428px] frame:justify-start">
+          <div className="relative z-20 flex justify-center lg:justify-end frame:absolute frame:right-[-24px] frame:top-[214px] frame:w-[449px] frame:justify-start">
             <div className="relative">
               <img
-                src="/assets/mascot.png"
+                src="/assets/mascot-front.png"
                 alt="DO-XX mascot"
-                className="relative z-10 w-56 sm:w-72 lg:w-[360px] frame:w-[428px] select-none"
+                className="relative z-10 w-56 sm:w-72 lg:w-[360px] frame:w-[449px] select-none"
               />
               <div className="absolute left-1/2 -translate-x-1/2 bottom-1 frame:bottom-[-30px] w-3/4 frame:w-[72%] h-6 frame:h-[34px] rounded-[50%] bg-black/20 blur-lg" />
             </div>
