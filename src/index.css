@@ -14,24 +14,41 @@
 html { scroll-behavior: smooth; }
 body { font-family: 'Lexend', sans-serif; }
 
+/* Stops sampled off the design PDF along its 165deg gradient axis, plus the
+   yellow bloom that sits against the right edge just above the diagonal. */
 .hero-grad {
   background:
-    radial-gradient(75% 110% at 100% 68%, rgba(236, 231, 135, 1) 0%, rgba(220, 226, 120, .5) 42%, rgba(206, 222, 110, 0) 70%),
-    linear-gradient(150deg, #034c5f 0%, #0c5a5c 28%, #1f8671 55%, #309d74 74%, #86bb78 100%);
+    radial-gradient(70% 95% at 100% 52%, rgba(240, 236, 140, 1) 0%, rgba(226, 231, 125, .55) 40%, rgba(206, 222, 110, 0) 72%),
+    linear-gradient(165deg, #013656 0%, #02495f 11%, #076066 22%, #117b6d 33%, #299772 44%, #57b279 55%, #86c67d 66%, #b6d685 80%, #dfe58b 100%);
 }
-.quote-grad { background: linear-gradient(100deg, #8f0dfe 0%, #9711fe 55%, #d63bd8 76%, #f460b3 88%, #ff8e3c 100%); }
-.quote-lines {
-  background: repeating-radial-gradient(circle at 88% 130%, transparent 0 34px, rgba(255, 255, 255, .12) 34px 36px);
-}
+.quote-grad { background: linear-gradient(100deg, #900fff 0%, #8f10ff 30%, #a610ee 55%, #ca10b9 72%, #f42f7d 88%, #ff7a45 100%); }
 .lime-btn {
   background: linear-gradient(180deg, #c4ec4e 0%, #a9d531 100%);
   color: #15321a;
   box-shadow: 0 8px 20px -8px rgba(155, 203, 42, .7);
 }
 .lime-btn:hover { filter: brightness(1.04); }
-.feat-card-pink { background: linear-gradient(180deg, #ffffff 0%, #fdeafc 55%, #fcd6fe 100%); }
-.feat-card-lav  { background: linear-gradient(180deg, #ffffff 0%, #f4f1fe 55%, #eee8fe 100%); }
+.feat-card-pink {
+  background:
+    radial-gradient(95% 78% at 6% 106%, rgba(253, 166, 223, .9) 0%, rgba(253, 190, 232, 0) 72%),
+    linear-gradient(180deg, #ffffff 0%, #fdf8fc 40%, #f7dcfd 100%);
+}
+.feat-card-lav { background: linear-gradient(180deg, #ffffff 0%, #fcfbff 42%, #e9e3ff 100%); }
+/* Full-width wash sitting behind the cards; opaque only at the section's foot. */
+.feat-bloom {
+  background: linear-gradient(90deg, #fda1dd 0%, #fd8cf1 10%, #ef8cfc 17%, #d894fd 25%, #c699fc 33%, #bb9dfc 42%, #b6a2fd 50%, #b6aafd 58%, #b6adfd 67%, #b3aefd 84%, #aeaafc 100%);
+  -webkit-mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, .25) 45%, rgba(0, 0, 0, .75) 82%, #000 100%);
+  mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, .25) 45%, rgba(0, 0, 0, .75) 82%, #000 100%);
+}
 .lu-cover { background: linear-gradient(150deg, #ece6fb 0%, #f4eef6 48%, #fbe9f2 100%); }
+/* Products illustration panel: white body with a green wash up the left edge
+   and along the bottom, sampled from the design. */
+.prod-panel {
+  background:
+    radial-gradient(125% 85% at 0% 100%, rgba(214, 231, 160, .95) 0%, rgba(230, 240, 198, .5) 40%, rgba(255, 255, 255, 0) 74%),
+    radial-gradient(80% 45% at 55% 102%, rgba(206, 230, 160, .75) 0%, rgba(255, 255, 255, 0) 72%),
+    linear-gradient(180deg, #fbfbf8 0%, #ffffff 50%, #f4f8e6 100%);
+}
 .team-card { background: linear-gradient(160deg, #ffffff 0%, #f8f3fb 52%, #f7dcf1 100%); }
 .team-card--alt { background: linear-gradient(160deg, #ffffff 0%, #f5f3fc 55%, #ece4fb 100%); }
 .logo-wm { font-weight: 800; letter-spacing: .12em; }
@@ -48,27 +65,8 @@ body { font-family: 'Lexend', sans-serif; }
 .panel-slider .slick-slide > div { height: 100%; }
 
 /* ---- react-slick (Latest Updates carousel) ---- */
-.lu-slider { padding-bottom: 72px; }
-.lu-slider .slick-list { margin: 0 -12px; }
+/* 14px gutter between cards, matching the design's 335px card pitch. */
+.lu-slider .slick-list { margin: 0 -7px; }
 .lu-slider .slick-track { display: flex; }
 .lu-slider .slick-slide { height: auto; }
-.lu-slider .slick-slide > div { height: 100%; padding: 0 12px; }
-.lu-slider .slick-prev, .lu-slider .slick-next {
-  width: 44px; height: 44px; z-index: 20;
-  top: auto; bottom: -58px; transform: none;
-}
-.lu-slider .slick-prev { left: 0; }
-.lu-slider .slick-next { right: 0; }
-.lu-slider .slick-prev:before, .lu-slider .slick-next:before { display: none; }
-
-.lu-dots {
-  position: absolute; bottom: -42px; left: 0; right: 0;
-  display: flex !important; align-items: center; justify-content: center;
-  gap: 8px; margin: 0; padding: 0; list-style: none;
-}
-.lu-dots li { width: auto; height: auto; margin: 0; }
-.lu-dots li span {
-  display: block; width: 8px; height: 6px; border-radius: 9999px;
-  background: rgba(136, 18, 254, .3); transition: all .3s ease;
-}
-.lu-dots li.slick-active span { width: 32px; background: #8812FE; }
+.lu-slider .slick-slide > div { height: 100%; padding: 0 7px; }

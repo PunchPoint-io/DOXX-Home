@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Slider from './slick'
-import type { Settings } from './slick'
+import type { Settings, SliderInstance } from './slick'
+import Pagination from './Pagination'
 
 type Update = {
   logo: string
@@ -20,23 +21,6 @@ const updates: Update[] = [
   { logo: 'logo-springleaf.png', category: 'Springleaf', text: 'Bringing the neighbourhood together with fresh flavours and a warm, welcoming atmosphere.', date: '2 January 2026' },
 ]
 
-type ArrowProps = { dir: 'prev' | 'next'; className?: string; onClick?: () => void }
-
-function Arrow({ dir, className, onClick }: ArrowProps) {
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      aria-label={dir === 'prev' ? 'Previous' : 'Next'}
-      className={`${className ?? ''} !flex items-center justify-center text-violet-brand hover:text-violet-soft transition`}
-    >
-      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        {dir === 'prev' ? <polyline points="15 18 9 12 15 6" /> : <polyline points="9 18 15 12 9 6" />}
-      </svg>
-    </button>
-  )
-}
-
 // react-slick's `responsive` config breaks under React StrictMode (media
 // handlers are torn down by the double mount), so drive slidesToShow manually.
 function slidesForWidth() {
@@ -45,7 +29,9 @@ function slidesForWidth() {
 }
 
 export default function LatestUpdates() {
+  const sliderRef = useRef<SliderInstance>(null)
   const [slidesToShow, setSlidesToShow] = useState(slidesForWidth)
+  const [idx, setIdx] = useState(0)
 
   useEffect(() => {
     const onResize = () => setSlidesToShow(slidesForWidth())
@@ -54,9 +40,8 @@ export default function LatestUpdates() {
   }, [])
 
   const settings: Settings = {
-    dots: true,
-    dotsClass: 'lu-dots',
-    customPaging: () => <span />,
+    dots: false,
+    arrows: false,
     infinite: true,
     autoplay: !window.matchMedia('(prefers-reduced-motion: reduce)').matches,
     autoplaySpeed: 3500,
@@ -64,46 +49,62 @@ export default function LatestUpdates() {
     speed: 500,
     slidesToShow,
     slidesToScroll: 1,
-    arrows: slidesToShow > 1,
-    prevArrow: <Arrow dir="prev" />,
-    nextArrow: <Arrow dir="next" />,
+    beforeChange: (_current, next) => setIdx(next),
   }
 
   return (
     <section className="bg-white border-b border-frame">
-      <div className="px-6 lg:px-8 py-16 lg:py-20">
+      <div className="px-6 frame:px-[20px] py-16 frame:pt-[68px] frame:pb-[52px]">
         <div className="flex items-center justify-between flex-wrap gap-4">
-          <h2 className="font-display font-extrabold [font-stretch:87%] text-3xl sm:text-[2.5rem] leading-none flex items-center gap-3">
-            <img src="/assets/ig-glyph.png" alt="" className="w-10 h-10" /> Latest Updates
+          <h2 className="font-display font-extrabold [font-stretch:87%] text-3xl sm:text-[2.5rem] frame:text-[44px] leading-none flex items-center gap-3 frame:gap-[18px]">
+            <img src="/assets/ig-glyph.png" alt="" className="w-10 h-10 frame:w-[70px] frame:h-[70px]" /> Latest Updates
           </h2>
-          <div className="flex items-center gap-3">
-            <span className="text-base text-ink/70">Follow us</span>
-            <a href="https://www.instagram.com/doxx_studio/" target="_blank" rel="noopener noreferrer" className="inline-block rounded-full ring-1 ring-violet-brand/50 text-violet-brand font-semibold px-5 py-2 hover:bg-violet-brand hover:text-white transition">doxx_studio</a>
+          <div className="flex items-center gap-3 frame:gap-[22px]">
+            <span className="text-base frame:text-[20px] text-ink/70">Follow us</span>
+            <a
+              href="https://www.instagram.com/doxx_studio/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-full ring-1 ring-violet-brand/60 text-violet-brand font-semibold px-5 py-2 frame:p-0 frame:h-[50px] frame:w-[168px] frame:text-[17px] hover:bg-violet-brand hover:text-white transition"
+            >
+              doxx_studio
+            </a>
           </div>
         </div>
 
-        <div className="lu-slider relative mt-10">
-          <Slider {...settings}>
+        <div className="lu-slider relative mt-10 frame:mt-[37px]">
+          <Slider ref={sliderRef} {...settings}>
             {updates.map((u) => (
               <div key={u.category}>
-                <article className="h-full rounded-2xl bg-white ring-1 ring-black/[0.07] overflow-hidden shadow-sm flex flex-col">
-                  <div className={`relative aspect-square flex items-center justify-center p-8 ${u.cover ? 'lu-cover' : 'bg-white'}`}>
+                <article className="h-full rounded-2xl frame:rounded-[14px] bg-[#F6F6FB] ring-1 ring-black/[0.07] overflow-hidden flex flex-col">
+                  <div className={`relative aspect-square frame:aspect-[335/420] flex items-center justify-center p-8 ${u.cover ? 'lu-cover' : 'bg-white'}`}>
                     <img src={`/assets/${u.logo}`} alt={u.category} loading="lazy" className="max-h-full max-w-full object-contain" />
                     {u.tag && (
-                      <span className="absolute left-0 bottom-5 bg-violet-brand text-white text-[13px] font-semibold pl-4 pr-7 py-1.5 [clip-path:polygon(0_0,100%_0,84%_100%,0_100%)]">{u.category}</span>
+                      <span className="absolute left-0 bottom-5 frame:bottom-[10px] bg-violet-brand text-white text-[13px] frame:text-[15px] font-semibold pl-4 frame:pl-[16px] pr-7 frame:pr-[18px] py-1.5 frame:py-[9px] rounded-r-md">{u.category}</span>
                     )}
                   </div>
-                  <div className="px-5 pt-5 pb-5 flex flex-col flex-1 border-t border-black/[0.06]">
-                    <p className="text-[0.95rem] text-ink/80 leading-relaxed">{u.text}</p>
-                    <div className="mt-auto pt-6 flex items-center justify-between text-sm">
+                  <div className="px-5 frame:px-[20px] pt-5 frame:pt-[17px] pb-5 frame:pb-[16px] flex flex-col flex-1 border-t border-black/[0.06]">
+                    <p className="text-[0.95rem] frame:text-[14px] text-ink/80 leading-relaxed frame:leading-[19.5px]">{u.text}</p>
+                    <div className="mt-auto pt-6 frame:pt-[26px] flex items-center justify-between text-sm frame:text-[12px]">
                       <span className="text-ink/40">{u.date}</span>
-                      <a href="https://www.instagram.com/doxx_studio/" target="_blank" rel="noopener noreferrer" className="font-semibold text-violet-brand hover:underline">View post</a>
+                      <a href="https://www.instagram.com/doxx_studio/" target="_blank" rel="noopener noreferrer" className="font-semibold text-violet-brand hover:underline frame:text-[13px]">View post</a>
                     </div>
                   </div>
                 </article>
               </div>
             ))}
           </Slider>
+
+          <div className="mt-8 frame:mt-[43px]">
+            <Pagination
+              count={updates.length}
+              index={idx}
+              onPrev={() => sliderRef.current?.slickPrev()}
+              onNext={() => sliderRef.current?.slickNext()}
+              onGo={(i) => sliderRef.current?.slickGoTo(i)}
+              label="update"
+            />
+          </div>
         </div>
       </div>
     </section>
