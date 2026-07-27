@@ -1,18 +1,39 @@
 export default function Products() {
   return (
     <section className="relative bg-white overflow-hidden border-b border-frame">
+      {/* Yellow bloom top-right and green bloom along the foot, per the design. */}
       <div
-        className="pointer-events-none absolute -top-16 right-0 w-[48%] h-[65%]"
-        style={{ background: 'radial-gradient(55% 55% at 80% 25%, rgba(226, 240, 172, .95) 0%, rgba(232, 241, 201, .4) 55%, rgba(232, 241, 201, 0) 78%)' }}
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            'radial-gradient(30% 34% at 74% 0%, rgba(226,232,140,.85) 0%, rgba(236,240,180,.35) 45%, rgba(240,244,200,0) 75%),' +
+            'radial-gradient(38% 30% at 50% 102%, rgba(150,200,110,.55) 0%, rgba(200,225,165,0) 72%)',
+        }}
       />
-      <div className="relative mx-auto grid items-center lg:grid-cols-2 lg:min-h-[500px]">
-        <div className="order-2 lg:order-1 px-4 lg:px-6 py-8 lg:py-10 flex items-center justify-center">
-          <img src="/assets/product.png" alt="DO-XX central control panel on tablets" loading="lazy" className="w-full max-w-[520px] select-none scale-[1.08]" />
-        </div>
-        <div className="order-1 lg:order-2 px-6 lg:pl-16 lg:pr-14 pt-10 lg:pt-0 flex flex-col justify-center">
-          <h2 className="font-display font-medium tracking-[-0.03em] text-4xl sm:text-5xl xl:text-[3.75rem] leading-[1.0]">DO-XX Products<br />and Services</h2>
-          <p className="mt-6 font-light text-ink/70 text-lg leading-[1.5] max-w-[26rem]">Central control panel for all your digital screens. Launch marketing and promotional content across all stores in 1 click.</p>
-          <a href="#contact" className="lime-btn mt-12 inline-block rounded-full font-bold text-base px-[3.3rem] py-3.5">Learn More</a>
+      <div className="relative px-6 frame:px-[20px] frame:min-h-[642px]">
+        <div className="grid items-center lg:grid-cols-2 frame:grid-cols-[670px_1fr] frame:gap-[90px] frame:items-start">
+          <div className="prod-panel rounded-[14px] ring-1 ring-black/[0.06] py-10 frame:py-0 frame:mt-[19px] frame:min-h-[623px] flex items-center justify-center">
+            <img
+              src="/assets/product.png"
+              alt="DO-XX central control panel on tablets"
+              loading="lazy"
+              className="w-full max-w-[440px] frame:w-[440px] select-none"
+            />
+          </div>
+          <div className="pt-10 frame:pt-[165px]">
+            <h2 className="font-display font-extrabold [font-stretch:87%] text-4xl sm:text-5xl frame:text-[59px] leading-[1.0] frame:leading-[57px]">
+              DO-XX Products<br />and Services
+            </h2>
+            <p className="mt-6 frame:mt-[36px] text-ink/70 text-base frame:text-[19px] leading-relaxed frame:leading-[30px] max-w-[25rem] frame:max-w-[460px]">
+              Central control panel for all your digital screens. Launch marketing and promotional content across all stores in 1 click.
+            </p>
+            <a
+              href="#contact"
+              className="lime-btn mt-7 frame:mt-[38px] inline-flex items-center justify-center rounded-full font-bold text-base frame:text-[17px] px-[3.3rem] py-3.5 frame:p-0 frame:h-[52px] frame:w-[219px]"
+            >
+              Learn More
+            </a>
+          </div>
         </div>
       </div>
     </section>

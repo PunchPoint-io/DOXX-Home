@@ -1,23 +1,29 @@
 export default function Hero() {
   return (
-    <section className="hero-grad relative overflow-hidden min-h-[520px] lg:min-h-[660px]">
-      <div className="mx-auto max-w-wide px-6 lg:px-10 pt-44 pb-28 lg:pt-[14.5rem] lg:pb-[11rem]">
-        <div className="grid lg:grid-cols-[1.6fr_1fr] items-center gap-8">
-          <h1 className="font-display font-semibold tracking-[-0.04em] leading-[1.0] text-4xl sm:text-6xl lg:text-[5.625rem]">
+    <section className="hero-grad relative overflow-hidden">
+      {/* At >=1420px every offset below is measured off the 1420px design frame. */}
+      <div className="relative mx-auto max-w-wide px-6 frame:px-0 pt-40 pb-24 frame:min-h-[846px] frame:pt-0 frame:pb-0">
+        <div className="grid lg:grid-cols-[1.3fr_0.7fr] gap-10 items-center frame:block">
+          <h1 className="relative z-10 font-display font-bold [font-stretch:88%] leading-[1.02] frame:leading-none text-4xl sm:text-6xl frame:text-[5.625rem] frame:pt-[266px]">
             <span className="block whitespace-nowrap text-[#F3FFD4]">Retail Digital Displays</span>
             <span className="block whitespace-nowrap text-white">Content Management</span>
             <span className="block text-white">System</span>
           </h1>
-          <div className="relative z-10 flex justify-center lg:justify-end lg:translate-y-6">
+          {/* z-20 keeps the mascot above the white wedge, which it overlaps in the design. */}
+          <div className="relative z-20 flex justify-center lg:justify-end frame:absolute frame:right-[-24px] frame:top-[214px] frame:w-[449px] frame:justify-start">
             <div className="relative">
-              <img src="/assets/mascot-front.png" alt="DO-XX mascot" className="relative z-10 w-48 sm:w-64 lg:w-[24rem] select-none" />
-              <div className="absolute left-1/2 -translate-x-1/2 bottom-1 lg:bottom-2 w-3/4 h-5 rounded-[50%] bg-black/25 blur-md" />
+              <img
+                src="/assets/mascot-front.png"
+                alt="DO-XX mascot"
+                className="relative z-10 w-56 sm:w-72 lg:w-[360px] frame:w-[449px] select-none"
+              />
+              <div className="absolute left-1/2 -translate-x-1/2 bottom-1 frame:bottom-[-30px] w-3/4 frame:w-[72%] h-6 frame:h-[34px] rounded-[50%] bg-black/20 blur-lg" />
             </div>
           </div>
         </div>
       </div>
       <div
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-24 lg:h-48 bg-white"
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-0 h-28 frame:h-[347px] bg-white"
         style={{ clipPath: 'polygon(0 100%, 100% 0, 100% 100%)' }}
       />
     </section>

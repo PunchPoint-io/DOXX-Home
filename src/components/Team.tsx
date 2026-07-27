@@ -9,31 +9,32 @@ const team: Member[] = [
 
 export default function Team() {
   return (
-    <section className="bg-lav border-b border-frame">
-      <div className="px-6 lg:px-8 py-16 lg:py-20">
-        <div className="flex items-start justify-between gap-4">
-          <h2 className="font-display font-medium tracking-[-0.045em] text-4xl lg:text-[3.75rem] lg:leading-none">The Team</h2>
-          <img src="/assets/team-doxx-logo.png" alt="DO-XX Studio" className="h-12 w-auto mt-1 select-none" />
+    <section className="bg-[#F6F6FB] border-b border-frame">
+      <div className="px-6 frame:px-[20px] py-16 frame:pt-[59px] frame:pb-[37px]">
+        <div className="flex items-start justify-between gap-4 frame:px-[41px]">
+          <h2 className="font-display font-extrabold [font-stretch:87%] text-4xl frame:text-[60px] frame:leading-none">The Team</h2>
+          {/* h-9 = the design's 36px; the old PNG had the crop baked in. */}
+          <img src="/assets/logo-doxx-dark.png" alt="DO-XX Studio" className="h-9 w-auto mt-1 frame:mt-[9px] select-none" />
         </div>
 
-        <div className="mt-10 grid grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="mt-10 frame:mt-[38px] grid grid-cols-2 lg:grid-cols-4 gap-5 frame:gap-[14px]">
           {team.map((m) => (
             <article
               key={m.id}
-              className={`${m.alt ? 'team-card--alt' : 'team-card'} relative rounded-2xl overflow-hidden ring-1 ring-black/[0.05] shadow-sm flex flex-col min-h-[420px]`}
+              className={`${m.alt ? 'team-card--alt' : 'team-card'} relative rounded-2xl frame:rounded-[14px] overflow-hidden ring-1 ring-black/[0.05] shadow-sm flex flex-col min-h-[420px] frame:min-h-[491px]`}
             >
-              <div className="self-start bg-[#ABDCE0] pl-6 pr-12 py-3 [clip-path:polygon(0_0,100%_0,84%_100%,0_100%)]">
-                <span className="font-display font-semibold text-2xl sm:text-[1.75rem] text-ink">{m.name}</span>
+              <div className="self-start bg-[#ABDCE0] pl-6 frame:pl-[30px] pr-12 frame:pr-[56px] py-3 frame:py-[13px] [clip-path:polygon(0_0,100%_0,84%_100%,0_100%)]">
+                <span className="font-display font-extrabold text-xl sm:text-2xl frame:text-[25px] text-ink">{m.name}</span>
               </div>
-              <div className="flex-1 flex items-center justify-center px-6 py-7">
+              <div className="flex-1 flex items-center justify-center px-5 py-6 frame:px-[36px] frame:pt-[18px] frame:pb-[10px]">
                 <img
                   src={`/assets/team-${m.id}.png`}
                   alt={m.name}
                   loading="lazy"
-                  className="max-h-[285px] w-auto object-contain drop-shadow-sm"
+                  className="max-h-[250px] frame:max-h-[268px] w-auto object-contain drop-shadow-sm"
                 />
               </div>
-              <p className="text-center font-medium text-ink/90 text-base pb-8 px-4">{m.tagline}</p>
+              <p className="text-center font-semibold text-ink/90 text-[0.95rem] frame:text-[15px] pb-7 frame:pb-[42px] px-4">{m.tagline}</p>
             </article>
           ))}
         </div>
