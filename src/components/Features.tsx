@@ -39,8 +39,11 @@ export default function Features() {
       <div className="feat-bloom pointer-events-none absolute inset-x-0 bottom-0 h-[380px] frame:h-[540px]" />
 
       <div className="relative px-6 frame:px-[20px] pt-20 frame:pt-0 pb-20 frame:pb-[21px]">
-        <div className="flex items-center justify-center gap-4 sm:gap-5 frame:gap-[33px] frame:min-h-[231px]">
-          <img src="/assets/mascot.png" alt="" className="w-20 sm:w-24 frame:w-[215px] shrink-0" />
+        <div className="flex items-center justify-center gap-4 sm:gap-5 frame:gap-0 frame:justify-start frame:pl-[66px] frame:min-h-[231px]">
+          {/* This section uses the 3/4-turned pose, not the hero's front-facing one.
+              -my keeps the 264px-tall mascot from growing the measured 231px row;
+              -mr pulls the heading into the mascot's transparent right margin. */}
+          <img src="/assets/mascot-3q.png" alt="" className="w-20 sm:w-24 frame:w-[260px] frame:-my-[17px] frame:mr-[-22px] frame:translate-y-[22px] shrink-0" />
           <h2 className="font-display font-extrabold [font-stretch:87%] text-2xl sm:text-4xl frame:text-[3.4375rem] leading-tight frame:leading-none">
             Unlock <span className="text-grass">Unlimited Marketing Possibilities</span>
           </h2>

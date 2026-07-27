@@ -32,7 +32,7 @@ export default function QuoteBanner() {
             </p>
           </div>
           <div className="flex justify-center frame:block frame:absolute frame:left-[868px] frame:top-[212px]">
-            <img src="/assets/mascot-smile.png" alt="" loading="lazy" className="w-40 sm:w-64 frame:w-[285px] drop-shadow-2xl" />
+            <img src="/assets/mascot-smile.png" alt="" loading="lazy" className="w-40 sm:w-64 frame:w-[331px] frame:-translate-x-[30px] frame:-translate-y-[123px] frame:rotate-[13deg] drop-shadow-2xl" />
           </div>
         </div>
       </div>
