@@ -2,7 +2,7 @@ export default function Hero() {
   return (
     <section className="hero-grad relative overflow-hidden">
       {/* At >=1420px every offset below is measured off the 1420px design frame. */}
-      <div className="relative mx-auto max-w-wide px-6 frame:px-0 pt-40 pb-24 frame:h-[846px] frame:pt-0 frame:pb-0">
+      <div className="relative mx-auto max-w-wide px-6 frame:px-0 pt-40 pb-24 frame:min-h-[846px] frame:pt-0 frame:pb-0">
         <h1 className="relative z-10 font-display font-bold [font-stretch:88%] leading-[1.02] frame:leading-none text-4xl sm:text-6xl frame:text-[5.625rem] frame:pt-[266px]">
           <span className="block whitespace-nowrap text-[#F3FFD4]">Retail Digital Displays</span>
           <span className="block whitespace-nowrap text-white">Content Management</span>

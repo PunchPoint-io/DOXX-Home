@@ -7,7 +7,7 @@ import Products from './components/Products'
 import RetailBrands from './components/RetailBrands'
 import Events from './components/Events'
 import QuoteBanner from './components/QuoteBanner'
-import ApacPartners from './components/ApacPartners'
+import ApacPartners, { PartnerLogos } from './components/ApacPartners'
 import Team from './components/Team'
 import FooterCTA from './components/FooterCTA'
 import SiteFooter from './components/SiteFooter'
@@ -27,6 +27,7 @@ export default function App() {
           <Events />
           <QuoteBanner />
           <ApacPartners />
+          <PartnerLogos />
           <Team />
           <FooterCTA />
           <SiteFooter />

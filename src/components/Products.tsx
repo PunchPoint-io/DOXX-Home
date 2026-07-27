@@ -10,9 +10,9 @@ export default function Products() {
             'radial-gradient(38% 30% at 50% 102%, rgba(150,200,110,.55) 0%, rgba(200,225,165,0) 72%)',
         }}
       />
-      <div className="relative px-6 frame:px-[20px] frame:h-[642px]">
+      <div className="relative px-6 frame:px-[20px] frame:min-h-[642px]">
         <div className="grid items-center lg:grid-cols-2 frame:grid-cols-[670px_1fr] frame:gap-[90px] frame:items-start">
-          <div className="prod-panel rounded-[14px] ring-1 ring-black/[0.06] py-10 frame:py-0 frame:mt-[19px] frame:h-[623px] flex items-center justify-center">
+          <div className="prod-panel rounded-[14px] ring-1 ring-black/[0.06] py-10 frame:py-0 frame:mt-[19px] frame:min-h-[623px] flex items-center justify-center">
             <img
               src="/assets/product.png"
               alt="DO-XX central control panel on tablets"

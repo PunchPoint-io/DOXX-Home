@@ -21,7 +21,7 @@ export default function Team() {
           {team.map((m) => (
             <article
               key={m.id}
-              className={`${m.alt ? 'team-card--alt' : 'team-card'} relative rounded-2xl frame:rounded-[14px] overflow-hidden ring-1 ring-black/[0.05] shadow-sm flex flex-col min-h-[420px] frame:h-[491px]`}
+              className={`${m.alt ? 'team-card--alt' : 'team-card'} relative rounded-2xl frame:rounded-[14px] overflow-hidden ring-1 ring-black/[0.05] shadow-sm flex flex-col min-h-[420px] frame:min-h-[491px]`}
             >
               <div className="self-start bg-[#ABDCE0] pl-6 frame:pl-[30px] pr-12 frame:pr-[56px] py-3 frame:py-[13px] [clip-path:polygon(0_0,100%_0,84%_100%,0_100%)]">
                 <span className="font-display font-extrabold text-xl sm:text-2xl frame:text-[25px] text-ink">{m.name}</span>

@@ -39,7 +39,7 @@ export default function Features() {
       <div className="feat-bloom pointer-events-none absolute inset-x-0 bottom-0 h-[380px] frame:h-[540px]" />
 
       <div className="relative px-6 frame:px-[20px] pt-20 frame:pt-0 pb-20 frame:pb-[21px]">
-        <div className="flex items-center justify-center gap-4 sm:gap-5 frame:gap-[33px] frame:h-[231px]">
+        <div className="flex items-center justify-center gap-4 sm:gap-5 frame:gap-[33px] frame:min-h-[231px]">
           <img src="/assets/mascot.png" alt="" className="w-20 sm:w-24 frame:w-[215px] shrink-0" />
           <h2 className="font-display font-extrabold [font-stretch:87%] text-2xl sm:text-4xl frame:text-[3.4375rem] leading-tight frame:leading-none">
             Unlock <span className="text-grass">Unlimited Marketing Possibilities</span>
@@ -50,7 +50,7 @@ export default function Features() {
           {features.map((f) => (
             <article
               key={f.tag}
-              className={`${f.bg} relative rounded-3xl frame:rounded-[24px] ring-1 ring-black/[0.06] shadow-[0_2px_18px_-8px_rgba(80,40,120,0.16)] overflow-hidden flex flex-col min-h-[460px] frame:h-[571px]`}
+              className={`${f.bg} relative rounded-3xl frame:rounded-[24px] ring-1 ring-black/[0.06] shadow-[0_2px_18px_-8px_rgba(80,40,120,0.16)] overflow-hidden flex flex-col min-h-[460px] frame:min-h-[571px]`}
             >
               <span className="self-start bg-violet-brand text-white text-base frame:text-[19px] font-semibold pl-5 frame:pl-[42px] pr-9 frame:pr-[56px] py-2.5 frame:py-[15px] [clip-path:polygon(0_0,100%_0,84%_100%,0_100%)]">{f.tag}</span>
               <div className="px-7 frame:pl-[40px] frame:pr-[70px] pb-8 frame:pb-[74px] pt-6 frame:pt-[43px] flex flex-col flex-1">

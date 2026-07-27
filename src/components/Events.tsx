@@ -7,16 +7,40 @@ type EventSlide = { img: string; title: string; date: string; text: string }
 
 const events: EventSlide[] = [
   {
-    img: 'events-collage.jpg',
+    img: 'ev-ledger.jpg',
     title: 'Ledger\n@ TOKEN2049',
     date: '1-2 October 2025',
     text: 'Designed and delivered a premium exhibition booth for Ledger at TOKEN2049 Singapore, creating an engaging environment through modern spatial design, interactive product experiences, and bold visual branding.',
   },
   {
-    img: 'events.png',
-    title: 'Ledger\n@ TOKEN2049',
-    date: 'Booth highlights',
-    text: 'Interactive product showcases, an integrated lounge, and a bold spatial identity brought the Ledger brand to life on the show floor across both event days.',
+    img: 'ev-rialo.jpg',
+    title: 'Rialo by Subzero Labs\n@ TOKEN2049',
+    date: '1-2 October 2025',
+    text: 'An immersive booth experience for Rialo by Subzero Labs at TOKEN2049 Singapore, blending contemporary spatial design, illuminated branding, and interactive touchpoints to maximize visibility and audience engagement.',
+  },
+  {
+    img: 'ev-continuity.jpg',
+    title: 'Continuity, Fluidity\nand Unity',
+    date: '8 October 2025',
+    text: 'A thoughtfully curated private art exhibition at Artspace@Helutrans, combining refined spatial design, immersive storytelling, and gallery experiences to celebrate contemporary art and creative dialogue.',
+  },
+  {
+    img: 'ev-biochar.jpg',
+    title: 'The Biochar Effect',
+    date: '20 May 2026',
+    text: 'A compelling premiere experience for The Biochar Effect Singapore at the ArtScience Museum, combining creative spatial design, immersive branding, and sustainable storytelling to spotlight the future of carbon innovation.',
+  },
+  {
+    img: 'ev-redefining.jpg',
+    title: '(Re)Defining\nSingapore',
+    date: '10 April 2026',
+    text: 'From concept to execution, we delivered the launch of (Re)Defining Singapore at the National Gallery Singapore, creating an elegant event experience through immersive spatial design, premium branding, and seamless production.',
+  },
+  {
+    img: 'ev-sandhouse.jpg',
+    title: 'SANDHOUSE\n@ TOKEN2049',
+    date: '1 October 2025',
+    text: 'A premium Web3 community experience executed for SandHouse by The Sandbox at TOKEN2049 Singapore — delivering seamless production, immersive brand environments, and meaningful networking experiences.',
   },
 ]
 
@@ -66,7 +90,7 @@ export default function Events() {
                     src={`/assets/${e.img}`}
                     alt={`DO-XX exhibition booth — ${e.title.replace('\n', ' ')}`}
                     loading="lazy"
-                    className="w-full aspect-[1800/1192] object-cover"
+                    className="w-full aspect-[1400/916] object-cover"
                   />
                   <div className="frame:pl-[26px] frame:pr-[60px]">
                     <h3 className="font-display [font-stretch:87%] text-2xl frame:text-[40px] font-extrabold leading-tight frame:leading-[42px] whitespace-pre-line">{e.title}</h3>

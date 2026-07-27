@@ -5,44 +5,58 @@ import Pagination from './Pagination'
 
 type Brand = { logo: string; name: string; text: string; shots: string }
 
-// `shots` is the per-slide photo mosaic. Only Springleaf ships a mosaic in the
-// design source; the other brands fall back to it until their own exports land.
+// `shots` is the per-slide photo mosaic, so image and copy advance together.
 const brands: Brand[] = [
   {
-    logo: 'logo-springleaf.png',
+    logo: 'logo-springleaf2.png',
     name: 'Springleaf\nPrata Place',
-    shots: 'retail.png',
+    shots: 'rb-springleaf.jpg',
     text: 'Founded in 2003, Springleaf Prata Place is a renowned halal Indian restaurant brand in Singapore, famous for the innovative prata creations such as Ultimate Murtabak, Murtaburger, and authentic South Indian cuisine.',
   },
   {
-    logo: 'logo-forest.png',
-    name: 'Forest\nDarts Cafe',
-    shots: 'retail.png',
-    text: 'A community-driven darts cafe where casual hobby meets competitive passion. Digital displays keep leagues, menus, and events in sync across every corner of the venue.',
+    // NOTE: Figma pairs a "Yew Kee Group" paragraph with Chicha San Chen logo +
+    // photos. Logo/gallery (and the hero client bar) say Chicha San Chen, so we
+    // use that. Client to confirm final copy for this slide.
+    logo: 'logo-yewkee.png',
+    name: 'Chicha\nSan Chen',
+    shots: 'rb-yewkee.jpg',
+    text: 'Chicha San Chen is a premium Taiwanese tea brand serving freshly brewed, made-to-order teas, bringing authentic tea culture and a modern in-store experience to outlets across Singapore.',
   },
   {
-    logo: 'logo-sauna.png',
-    name: 'Sauna\nBath House',
-    shots: 'retail.png',
-    text: 'A moment of stillness in the heart of Singapore’s busiest district. Calm, curated screen content guides guests through rituals, bookings, and wellness programmes.',
+    logo: 'logo-sushi.png',
+    name: 'Sushi Express',
+    shots: 'rb-sushi.jpg',
+    text: 'One of the biggest conveyor belt sushi brands in Asia, offering more than 80 different variations of sushi from $1.50++ per plate — consistently providing quality and innovative products at competitive prices.',
   },
   {
-    logo: 'logo-curry.png',
-    name: 'Hong Lim\nCurry Puff',
-    shots: 'retail.png',
-    text: 'Balancing traditional snacks with a modern retail experience. Menu boards and promotions update across outlets in one click, keeping heritage flavours front and centre.',
+    logo: 'logo-jinjja.png',
+    name: 'Jinjja Chicken',
+    shots: 'rb-jinjja.jpg',
+    text: 'JINJJA Chicken is a halal-certified Korean fast-casual brand, best known for its signature Korean Fried Chicken and Jjajangmyeon. Inspired by South Korea’s street food culture, with outlets across Singapore, Malaysia, and Indonesia.',
   },
   {
-    logo: 'logo-tr.png',
-    name: "Jalan Kayu's\nTR",
-    shots: 'retail.png',
-    text: 'Authentic Indian Muslim cuisine at any hour of the day or night. Round-the-clock digital menus and offers match the kitchen’s always-on service.',
+    logo: 'logo-hainan.png',
+    name: 'The Hainan\nStory',
+    shots: 'rb-hainan.jpg',
+    text: 'The Hainan Story is a Singapore heritage dining brand renowned for its authentic Hainanese cuisine — signature Hainanese Chicken Rice, Kaya Toast, and nostalgic local flavors with a modern take on the city’s rich culinary heritage.',
   },
   {
-    logo: 'logo-ledger.png',
-    name: 'Ledger\nConcept Store',
-    shots: 'retail.png',
-    text: 'A modern space where great coffee meets thoughtful design. In-store screens pair product storytelling with a welcoming everyday community.',
+    logo: 'logo-koufu.png',
+    name: 'Koufu Group',
+    shots: 'rb-koufu.jpg',
+    text: 'Koufu Group is one of Singapore’s leading F&B groups, operating an extensive network of food courts, coffee shops, and restaurants. Since 2002 it has built a trusted portfolio of dining brands serving millions of customers.',
+  },
+  {
+    logo: 'logo-beechoo.png',
+    name: 'Bee Choo Origin',
+    shots: 'rb-beechoo.jpg',
+    text: 'Bee Choo Origin is a trusted herbal hair and scalp care brand, specializing in natural treatments for hair loss and scalp health. Since 2000 the brand has expanded across Asia through its signature herbal solutions.',
+  },
+  {
+    logo: 'logo-westernunion.png',
+    name: 'Western Union',
+    shots: 'rb-westernunion.jpg',
+    text: 'Western Union is a global leader in cross-border money transfers and payment services, connecting customers across more than 200 countries and territories through secure, fast, and reliable financial solutions.',
   },
 ]
 

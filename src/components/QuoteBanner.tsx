@@ -12,7 +12,7 @@ const STRANDS = Array.from({ length: 44 }, (_, i) => {
 export default function QuoteBanner() {
   return (
     <section className="bg-[#F6F6FB] border-b border-frame py-10 frame:pt-[69px] frame:pb-[70px]">
-      <div className="quote-grad relative overflow-hidden rounded-[10px] px-8 frame:px-[60px] py-14 frame:py-0 frame:h-[645px]">
+      <div className="quote-grad relative overflow-hidden rounded-[10px] px-8 frame:px-[60px] py-14 frame:py-[70px] frame:min-h-[645px]">
         <svg
           className="pointer-events-none absolute inset-y-0 right-0 h-full w-[70%] frame:w-[38%]"
           viewBox="0 0 540 644"
@@ -32,7 +32,7 @@ export default function QuoteBanner() {
             </p>
           </div>
           <div className="flex justify-center frame:block frame:absolute frame:left-[868px] frame:top-[212px]">
-            <img src="/assets/mascot-closed.png" alt="" loading="lazy" className="w-40 sm:w-64 frame:w-[285px] drop-shadow-2xl" />
+            <img src="/assets/mascot-smile.png" alt="" loading="lazy" className="w-40 sm:w-64 frame:w-[285px] drop-shadow-2xl" />
           </div>
         </div>
       </div>
