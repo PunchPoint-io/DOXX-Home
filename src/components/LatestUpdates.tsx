@@ -9,11 +9,10 @@ type Update = {
   text: string
   date: string
   cover?: boolean
-  tag?: boolean
 }
 
 const updates: Update[] = [
-  { logo: 'logo-forest-t.png', cover: true, tag: true, category: 'Forest Darts Cafe', text: 'Transform a casual hobby into a competitive passion with the right community support.', date: '2 January 2026' },
+  { logo: 'logo-forest.png', cover: true, category: 'Forest Darts Cafe', text: 'Transform a casual hobby into a competitive passion with the right community support.', date: '2 January 2026' },
   { logo: 'logo-sauna.png', category: 'Sauna Bath House', text: "Finding a moment of stillness in the heart of Singapore's busiest district has never been more accessible.", date: '2 January 2026' },
   { logo: 'logo-curry.png', category: 'Hong Lim Curry Puff', text: 'Finding the perfect balance between traditional snacks and a modern retail experience has never been more sea...', date: '2 January 2026' },
   { logo: 'logo-tr.png', category: "Jalan Kayu's TR", text: 'Satisfy your cravings for authentic Indian Muslim cuisine at any hour of the day or night.', date: '2 January 2026' },
@@ -77,11 +76,15 @@ export default function LatestUpdates() {
             {updates.map((u) => (
               <div key={u.category}>
                 <article className="h-full rounded-2xl frame:rounded-[14px] bg-[#F6F6FB] ring-1 ring-black/[0.07] overflow-hidden flex flex-col">
-                  <div className={`relative aspect-square frame:aspect-[335/420] flex items-center justify-center p-8 ${u.cover ? 'lu-cover' : 'bg-white'}`}>
-                    <img src={`/assets/${u.logo}`} alt={u.category} loading="lazy" className="max-h-full max-w-full object-contain" />
-                    {u.tag && (
-                      <span className="absolute left-0 bottom-5 frame:bottom-[10px] bg-violet-brand text-white text-[13px] frame:text-[15px] font-semibold pl-4 frame:pl-[16px] pr-7 frame:pr-[18px] py-1.5 frame:py-[9px] rounded-r-md">{u.category}</span>
-                    )}
+                  {/* Cover artwork fills the frame; its own label is baked in, so no tag
+                      element here -- rendering one produced the doubled "Forest Darts Cafe". */}
+                  <div className={`relative aspect-square frame:aspect-[335/420] flex items-center justify-center ${u.cover ? 'lu-cover' : 'bg-white p-8'}`}>
+                    <img
+                      src={`/assets/${u.logo}`}
+                      alt={u.category}
+                      loading="lazy"
+                      className={u.cover ? 'w-full h-full object-cover' : 'max-h-full max-w-full object-contain'}
+                    />
                   </div>
                   <div className="px-5 frame:px-[20px] pt-5 frame:pt-[17px] pb-5 frame:pb-[16px] flex flex-col flex-1 border-t border-black/[0.06]">
                     <p className="text-[0.95rem] frame:text-[14px] text-ink/80 leading-relaxed frame:leading-[19.5px]">{u.text}</p>
