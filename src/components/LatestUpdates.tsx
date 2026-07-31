@@ -55,7 +55,7 @@ export default function LatestUpdates() {
     <section className="bg-white border-b border-frame">
       <div className="px-6 frame:px-[20px] py-16 frame:pt-[68px] frame:pb-[52px]">
         <div className="flex items-center justify-between flex-wrap gap-4">
-          <h2 className="font-display font-extrabold [font-stretch:87%] text-3xl sm:text-[2.5rem] frame:text-[44px] leading-none flex items-center gap-3 frame:gap-[18px]">
+          <h2 className="font-display font-semibold tracking-[-0.03em] text-3xl sm:text-[2.5rem] frame:text-[40px] leading-none flex items-center gap-3 frame:gap-[18px]">
             <img src="/assets/ig-glyph.png" alt="" className="w-10 h-10 frame:w-[70px] frame:h-[70px]" /> Latest Updates
           </h2>
           <div className="flex items-center gap-3 frame:gap-[22px]">

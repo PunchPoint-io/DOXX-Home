@@ -26,8 +26,8 @@ export default function QuoteBanner() {
 
         <div className="relative grid frame:block gap-8 frame:gap-0 items-center h-full">
           <div className="text-white frame:pt-[168px] frame:max-w-[770px]">
-            <p className="font-display font-extrabold [font-stretch:87%] text-white/90 text-lg sm:text-2xl frame:text-[30px] frame:leading-none">There are lines that one should never cross</p>
-            <p className="mt-3 frame:mt-[42px] font-display font-extrabold [font-stretch:87%] text-2xl sm:text-3xl frame:text-[54px] leading-snug frame:leading-[58px]">
+            <p className="font-display font-light tracking-[-0.03em] text-white/90 text-lg sm:text-2xl frame:text-[30px] frame:leading-none">There are lines that one should never cross</p>
+            <p className="mt-3 frame:mt-[42px] font-display font-medium tracking-[-0.03em] text-2xl sm:text-3xl frame:text-[54px] leading-snug frame:leading-[58px]">
               At DO-XX Studio, we tamper lines. In fact, we'd like to <span className="text-lime-brand">own</span> those lines
             </p>
           </div>

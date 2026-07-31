@@ -12,7 +12,7 @@ export default function Team() {
     <section className="bg-[#F6F6FB] border-b border-frame">
       <div className="px-6 frame:px-[20px] py-16 frame:pt-[59px] frame:pb-[37px]">
         <div className="flex items-start justify-between gap-4 frame:px-[41px]">
-          <h2 className="font-display font-extrabold [font-stretch:87%] text-4xl frame:text-[60px] frame:leading-none">The Team</h2>
+          <h2 className="font-display font-medium tracking-[-0.045em] text-4xl frame:text-[60px] frame:leading-none">The Team</h2>
           {/* h-9 = the design's 36px; the old PNG had the crop baked in. */}
           <img src="/assets/logo-doxx-dark.png" alt="DO-XX Studio" className="h-9 w-auto mt-1 frame:mt-[9px] select-none" />
         </div>
@@ -24,7 +24,7 @@ export default function Team() {
               className={`${m.alt ? 'team-card--alt' : 'team-card'} relative rounded-2xl frame:rounded-[14px] overflow-hidden ring-1 ring-black/[0.05] shadow-sm flex flex-col min-h-[420px] frame:min-h-[491px]`}
             >
               <div className="self-start bg-[#ABDCE0] pl-6 frame:pl-[30px] pr-12 frame:pr-[56px] py-3 frame:py-[13px] [clip-path:polygon(0_0,100%_0,84%_100%,0_100%)]">
-                <span className="font-display font-extrabold text-xl sm:text-2xl frame:text-[25px] text-ink">{m.name}</span>
+                <span className="font-display font-semibold text-xl sm:text-2xl frame:text-[25px] text-ink">{m.name}</span>
               </div>
               <div className="flex-1 flex items-center justify-center px-5 py-6 frame:px-[36px] frame:pt-[18px] frame:pb-[10px]">
                 <img
