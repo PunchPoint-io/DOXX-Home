@@ -17,11 +17,11 @@ export default function Products() {
               src="/assets/product.png"
               alt="DO-XX central control panel on tablets"
               loading="lazy"
-              className="w-full max-w-[440px] frame:w-[440px] select-none"
+              className="w-full max-w-[440px] frame:w-[721px] frame:max-w-none frame:shrink-0 frame:-my-[10px] frame:-translate-y-[20px] select-none"
             />
           </div>
           <div className="pt-10 frame:pt-[165px]">
-            <h2 className="font-display font-extrabold [font-stretch:87%] text-4xl sm:text-5xl frame:text-[59px] leading-[1.0] frame:leading-[57px]">
+            <h2 className="font-display font-medium tracking-[-0.03em] text-4xl sm:text-5xl frame:text-[57px] leading-[1.0] frame:leading-[57px]">
               DO-XX Products<br />and Services
             </h2>
             <p className="mt-6 frame:mt-[36px] text-ink/70 text-base frame:text-[19px] leading-relaxed frame:leading-[30px] max-w-[25rem] frame:max-w-[460px]">

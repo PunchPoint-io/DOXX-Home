@@ -60,7 +60,7 @@ export default function ApacPartners() {
       </div>
 
       <div className="relative pl-6 frame:pl-[60px] frame:pr-[20px] grid frame:grid-cols-[1fr_804px] gap-6 frame:gap-0 items-start">
-        <h2 className="mt-8 frame:mt-[92px] font-display font-extrabold [font-stretch:87%] text-3xl sm:text-4xl frame:text-[60px] leading-[1.15] frame:leading-[58px]">
+        <h2 className="mt-8 frame:mt-[92px] font-display font-medium tracking-[-0.045em] text-3xl sm:text-4xl frame:text-[60px] leading-[1.15] frame:leading-[58px]">
           <span className="whitespace-nowrap">More than <span className="text-grass">500+</span></span><br />
           <span className="whitespace-nowrap">partnering brand</span><br />
           <span className="whitespace-nowrap">outlets across</span><br />

@@ -43,7 +43,7 @@ export default function Features() {
           {/* 3/4-turned pose, visor on the ball's right and no specular highlight --
               the mirrored render shipped before was the mascot the client kept flagging. */}
           <img src="/assets/mascot-3q.png" alt="" className="w-20 sm:w-24 frame:w-[226px] frame:mr-[32px] frame:translate-y-[18px] shrink-0" />
-          <h2 className="font-display font-extrabold [font-stretch:87%] text-2xl sm:text-4xl frame:text-[3.4375rem] leading-tight frame:leading-none">
+          <h2 className="font-display font-medium tracking-[-0.045em] text-2xl sm:text-4xl frame:text-[3.4375rem] leading-tight frame:leading-none">
             Unlock <span className="text-grass">Unlimited Marketing Possibilities</span>
           </h2>
         </div>
@@ -56,7 +56,7 @@ export default function Features() {
             >
               <span className="self-start bg-violet-brand text-white text-base frame:text-[19px] font-semibold pl-5 frame:pl-[42px] pr-9 frame:pr-[56px] py-2.5 frame:py-[15px] [clip-path:polygon(0_0,100%_0,84%_100%,0_100%)]">{f.tag}</span>
               <div className="px-7 frame:pl-[40px] frame:pr-[70px] pb-8 frame:pb-[74px] pt-6 frame:pt-[43px] flex flex-col flex-1">
-                <h3 className="font-display font-extrabold [font-stretch:87%] text-[1.7rem] frame:text-[40px] leading-tight frame:leading-[43px] tracking-tight frame:tracking-normal">{f.title}</h3>
+                <h3 className="font-display font-medium tracking-[-0.03em] text-[1.7rem] frame:text-[38px] leading-tight frame:leading-[43px]">{f.title}</h3>
                 <p className="mt-4 frame:mt-[19px] text-[0.95rem] frame:text-[19.5px] leading-relaxed frame:leading-[30px] text-ink/70">{f.body}</p>
                 <img src={`/assets/${f.img}`} alt="" loading="lazy" className="mt-auto pt-6 frame:pt-0 h-52 frame:h-[131px] w-auto object-contain mx-auto" />
               </div>

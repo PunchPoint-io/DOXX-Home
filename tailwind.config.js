@@ -8,7 +8,7 @@ export default {
       screens: { frame: '1420px' },
       fontFamily: {
         sans: ['Lexend', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        display: ['Hubot Sans', 'Lexend', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        display: ['Lexend', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       colors: {
         lime: { brand: '#AEDC3C', deep: '#9ccb2a' },

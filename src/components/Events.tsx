@@ -70,7 +70,7 @@ export default function Events() {
       >
         <div className="flex items-start justify-between flex-wrap gap-4 px-0 frame:px-[60px]">
           <div>
-            <h2 className="font-display font-extrabold [font-stretch:87%] text-3xl sm:text-4xl frame:text-[60px] frame:leading-none">Events Management</h2>
+            <h2 className="font-display font-medium tracking-[-0.045em] text-3xl sm:text-4xl frame:text-[58px] frame:leading-none">Events Management</h2>
             <p className="mt-2 frame:mt-[16px] text-lime-brand font-medium text-sm frame:text-[19px]">We design and deliver immersive brand experiences that demand attention.</p>
           </div>
           <a
@@ -93,7 +93,7 @@ export default function Events() {
                     className="w-full aspect-[1400/916] object-cover"
                   />
                   <div className="frame:pl-[26px] frame:pr-[60px]">
-                    <h3 className="font-display [font-stretch:87%] text-2xl frame:text-[40px] font-extrabold leading-tight frame:leading-[42px] whitespace-pre-line">{e.title}</h3>
+                    <h3 className="font-display font-semibold tracking-[-0.03em] text-2xl frame:text-[40px] leading-tight frame:leading-[42px] whitespace-pre-line">{e.title}</h3>
                     <p className="mt-2 frame:mt-[18px] text-lime-brand font-bold text-sm frame:text-[20px]">{e.date}</p>
                     <p className="mt-4 frame:mt-[26px] text-white/70 leading-relaxed text-sm frame:text-[17px] frame:leading-[26px]">{e.text}</p>
                   </div>

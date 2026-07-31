@@ -80,7 +80,7 @@ export default function RetailBrands() {
         <div className="bg-white rounded-2xl frame:rounded-[14px] ring-1 ring-black/[0.07] overflow-hidden pt-9 frame:pt-[59px] pb-8 frame:pb-[32px]">
           <div className="flex items-start justify-between gap-6 px-6 frame:px-[60px]">
             <div>
-              <h2 className="font-display font-extrabold [font-stretch:87%] text-3xl sm:text-4xl frame:text-[60px] leading-[0.95] frame:leading-none text-ink">Retail Brands</h2>
+              <h2 className="font-display font-medium tracking-[-0.045em] text-3xl sm:text-4xl frame:text-[58px] leading-[0.95] frame:leading-none text-ink">Retail Brands</h2>
               <p className="mt-2.5 frame:mt-[19px] text-violet-brand font-semibold text-base frame:text-[19px]">Designed to attract attention. Built to drive engagement and sales.</p>
             </div>
             <a
@@ -101,7 +101,7 @@ export default function RetailBrands() {
                     <div className="px-6 frame:pl-[34px] frame:pr-[60px] flex flex-col min-w-0">
                       <img src={`/assets/${b.logo}`} alt="" loading="lazy" className="h-[4.4rem] frame:h-[72px] w-auto object-contain object-left" />
                       <div className="mt-3.5 frame:mt-[26px] border-t border-black/10" />
-                      <h3 className="mt-4 frame:mt-[30px] font-display [font-stretch:87%] text-[2.15rem] frame:text-[40px] leading-none frame:leading-[42px] font-extrabold text-ink whitespace-pre-line">{b.name}</h3>
+                      <h3 className="mt-4 frame:mt-[30px] font-display font-semibold tracking-[-0.03em] text-[2.15rem] frame:text-[40px] leading-none frame:leading-[42px] text-ink whitespace-pre-line">{b.name}</h3>
                       <p className="mt-3.5 frame:mt-[24px] text-ink/70 leading-[1.55] frame:leading-[26px] text-[0.98rem] frame:text-[17px]">{b.text}</p>
                     </div>
                   </div>
