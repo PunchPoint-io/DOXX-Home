@@ -14,9 +14,8 @@ const brands: Brand[] = [
     text: 'Founded in 2003, Springleaf Prata Place is a renowned halal Indian restaurant brand in Singapore, famous for the innovative prata creations such as Ultimate Murtabak, Murtaburger, and authentic South Indian cuisine.',
   },
   {
-    // NOTE: Figma pairs a "Yew Kee Group" paragraph with Chicha San Chen logo +
-    // photos. Logo/gallery (and the hero client bar) say Chicha San Chen, so we
-    // use that. Client to confirm final copy for this slide.
+    // Brand logo and group label are intentionally different (Q3 2026 Retail
+    // Deck p8/p17/p18/p29). Do not "correct" the pairing.
     logo: 'logo-yewkee.png',
     name: 'Chicha\nSan Chen',
     shots: 'rb-yewkee.jpg',
