@@ -10,9 +10,9 @@ type Props = {
 // deck cover artwork + lead form. "Almost there. Tell us a little about
 // yourself, and we'll send you straight to our latest Retail Deck."
 const DECK_BY_SECTION: Record<string, { deck: string; cover: string }> = {
-  'Retail Brands': { deck: 'Retail Deck', cover: '/assets/deck-cover-retail.jpg' },
-  'Events Management': { deck: 'Activation Deck', cover: '/assets/deck-cover-activation.jpg' },
-  Products: { deck: 'Retail Deck', cover: '/assets/deck-cover-retail.jpg' }, // no modal mock in draft for Products — reuse Retail
+  'Retail Brands': { deck: 'Retail Deck', cover: '/assets/modal-banner-retail.jpg' },
+  'Events Management': { deck: 'Activation Deck', cover: '/assets/modal-banner-activation.jpg' },
+  Products: { deck: 'Retail Deck', cover: '/assets/modal-banner-retail.jpg' }, // no modal mock in draft for Products — reuse Retail
 }
 
 export default function InquiryModal({ open, section, onClose }: Props) {
@@ -70,7 +70,7 @@ export default function InquiryModal({ open, section, onClose }: Props) {
             src={info.cover}
             alt=""
             aria-hidden
-            className="hidden sm:block w-full h-full object-cover object-left select-none"
+            className="hidden sm:block w-full h-full object-cover select-none"
           />
           <div className="px-8 py-8 sm:px-10 sm:py-10 text-center sm:text-left">
             <span className="inline-flex items-center rounded-full bg-violet-brand/10 text-violet-brand font-semibold text-xs frame:text-[13px] px-3 py-1">
