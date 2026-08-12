@@ -66,12 +66,12 @@ export default function InquiryModal({ open, section, onClose }: Props) {
         </button>
 
         <div className="grid sm:grid-cols-[1fr_1.1fr]">
-          <div className="hidden sm:flex items-center justify-center bg-[#0E1116]">
+          <div className="hidden sm:flex items-center justify-center p-6 bg-[#F7F7FA]">
             <img
               src={info.cover}
               alt=""
               aria-hidden
-              className="w-full max-h-[540px] object-contain select-none"
+              className="w-full rounded-[10px] ring-1 ring-black/5 select-none"
             />
           </div>
           <div className="px-8 py-8 sm:px-10 sm:py-10 text-center sm:text-left">
