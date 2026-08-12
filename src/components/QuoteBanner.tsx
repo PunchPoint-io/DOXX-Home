@@ -1,12 +1,10 @@
-// The design draws ~30 slender strands sweeping past the mascot: near-vertical
-// curves that bow left around it and pack tighter toward the right edge.
+// Straight vertical strands packing tighter toward the right edge
+// (client annotation 2026-08-12: "use back this straight lines from previous version").
 const STRANDS = Array.from({ length: 44 }, (_, i) => {
   const t = i / 43
   // ease the spacing so lines crowd the right-hand edge
   const x = 30 + 510 * Math.pow(t, 0.78)
-  // strands nearest the mascot bow hardest
-  const bow = 118 * Math.exp(-Math.pow(t * 2.6, 2)) + 26 * (1 - t)
-  return `M ${x} 0 C ${x - bow} 175, ${x - bow} 470, ${x} 644`
+  return `M ${x} 0 L ${x} 644`
 })
 
 export default function QuoteBanner() {
