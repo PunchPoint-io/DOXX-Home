@@ -53,7 +53,7 @@ export default function InquiryModal({ open, section, onClose }: Props) {
       aria-labelledby="inquiry-title"
     >
       <div
-        className="relative w-full max-w-[1100px] rounded-2xl bg-white ring-1 ring-black/10 shadow-2xl overflow-hidden"
+        className="relative w-full max-w-[1200px] rounded-2xl bg-white ring-1 ring-black/10 shadow-2xl overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -73,10 +73,7 @@ export default function InquiryModal({ open, section, onClose }: Props) {
             className="hidden sm:block w-full h-full object-cover select-none"
           />
           <div className="px-8 py-8 sm:px-10 sm:py-10 text-center sm:text-left">
-            <span className="inline-flex items-center rounded-full bg-violet-brand/10 text-violet-brand font-semibold text-xs frame:text-[13px] px-3 py-1">
-              {section}
-            </span>
-            <h3 id="inquiry-title" className="mt-3 font-display font-medium tracking-[-0.02em] text-3xl frame:text-[32px] leading-none text-ink">
+            <h3 id="inquiry-title" className="font-display font-medium tracking-[-0.02em] text-3xl frame:text-[32px] leading-none text-ink">
               Almost there.
             </h3>
             <p className="mt-2 text-ink/70 text-sm frame:text-[15px] leading-snug">
