@@ -67,7 +67,7 @@ export default function ApacPartners() {
           <span className="text-grass whitespace-nowrap">Asia Pacific</span>
         </h2>
 
-        <div className="relative grid grid-cols-2 gap-3 frame:gap-x-[12px] frame:gap-y-[14px] frame:pt-[42px]">
+        <div className="relative grid grid-cols-2 gap-3 frame:gap-x-[12px] frame:gap-y-[14px] frame:pt-[42px] pb-6 frame:pb-[36px]">
           {COUNTRIES.map((c) => (
             <div
               key={c.flag}
