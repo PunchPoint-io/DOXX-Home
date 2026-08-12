@@ -53,7 +53,7 @@ export default function InquiryModal({ open, section, onClose }: Props) {
       aria-labelledby="inquiry-title"
     >
       <div
-        className="relative w-full max-w-2xl rounded-2xl bg-white ring-1 ring-black/10 shadow-2xl overflow-hidden"
+        className="relative w-full max-w-[1000px] rounded-2xl bg-white ring-1 ring-black/10 shadow-2xl overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -65,14 +65,16 @@ export default function InquiryModal({ open, section, onClose }: Props) {
           ✕
         </button>
 
-        <div className="grid sm:grid-cols-[1.05fr_1fr]">
-          <img
-            src={info.cover}
-            alt=""
-            aria-hidden
-            className="hidden sm:block w-full h-full object-cover select-none"
-          />
-          <div className="px-6 py-7 sm:px-8 sm:py-8">
+        <div className="grid sm:grid-cols-[1fr_1.1fr]">
+          <div className="hidden sm:flex items-center justify-center bg-[#0E1116]">
+            <img
+              src={info.cover}
+              alt=""
+              aria-hidden
+              className="w-full max-h-[540px] object-contain select-none"
+            />
+          </div>
+          <div className="px-8 py-8 sm:px-10 sm:py-10 text-center sm:text-left">
             <span className="inline-flex items-center rounded-full bg-violet-brand/10 text-violet-brand font-semibold text-xs frame:text-[13px] px-3 py-1">
               {section}
             </span>
