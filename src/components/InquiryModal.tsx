@@ -65,7 +65,7 @@ export default function InquiryModal({ open, section, onClose }: Props) {
           ✕
         </button>
 
-        <div className="grid sm:grid-cols-[0.5fr_1fr]">
+        <div className="grid sm:grid-cols-2">
           <img
             src={info.cover}
             alt=""
