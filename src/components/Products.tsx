@@ -21,7 +21,7 @@ export default function Products() {
               src="/assets/product.png"
               alt="DO-XX central control panel on tablets"
               loading="lazy"
-              className="w-full max-w-[440px] frame:w-[721px] frame:max-w-none frame:shrink-0 frame:-my-[10px] frame:-translate-y-[20px] select-none"
+              className="w-full max-w-[440px] frame:w-[640px] frame:max-w-[640px] frame:shrink-0 select-none"
             />
           </div>
           <div className="pt-10 frame:pt-[165px]">
