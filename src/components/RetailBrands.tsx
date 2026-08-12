@@ -2,6 +2,7 @@ import { useRef, useState } from 'react'
 import Slider from './slick'
 import type { Settings, SliderInstance } from './slick'
 import Pagination from './Pagination'
+import InquiryModal from './InquiryModal'
 
 type Brand = { logo: string; name: string; text: string; shots: string }
 
@@ -62,6 +63,7 @@ const brands: Brand[] = [
 export default function RetailBrands() {
   const sliderRef = useRef<SliderInstance>(null)
   const [idx, setIdx] = useState(0)
+  const [modalOpen, setModalOpen] = useState(false)
 
   const settings: Settings = {
     arrows: false,
@@ -82,12 +84,13 @@ export default function RetailBrands() {
               <h2 className="font-display font-medium tracking-[-0.045em] text-3xl sm:text-4xl frame:text-[58px] leading-[0.95] frame:leading-none text-ink">Retail Brands</h2>
               <p className="mt-2.5 frame:mt-[19px] text-violet-brand font-semibold text-base frame:text-[19px]">Designed to attract attention. Built to drive engagement and sales.</p>
             </div>
-            <a
-              href="#contact"
+            <button
+              type="button"
+              onClick={() => setModalOpen(true)}
               className="shrink-0 mt-1 frame:mt-0 inline-flex items-center justify-center rounded-full bg-violet-brand text-white font-semibold text-sm frame:text-[17px] px-8 py-3 frame:p-0 frame:h-[48px] frame:w-[219px] hover:bg-violet-soft transition"
             >
               Learn More
-            </a>
+            </button>
           </div>
 
           {/* The mosaic lives inside the slider so image and copy change together. */}
@@ -121,6 +124,7 @@ export default function RetailBrands() {
           </div>
         </div>
       </div>
-    </section>
+          <InquiryModal open={modalOpen} section="Retail Brands" onClose={() => setModalOpen(false)} />
+</section>
   )
 }

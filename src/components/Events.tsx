@@ -2,6 +2,7 @@ import { useRef, useState } from 'react'
 import Slider from './slick'
 import type { Settings, SliderInstance } from './slick'
 import Pagination from './Pagination'
+import InquiryModal from './InquiryModal'
 
 type EventSlide = { img: string; title: string; date: string; text: string }
 
@@ -47,6 +48,7 @@ const events: EventSlide[] = [
 export default function Events() {
   const sliderRef = useRef<SliderInstance>(null)
   const [idx, setIdx] = useState(0)
+  const [modalOpen, setModalOpen] = useState(false)
 
   const settings: Settings = {
     arrows: false,
@@ -73,12 +75,13 @@ export default function Events() {
             <h2 className="font-display font-medium tracking-[-0.045em] text-3xl sm:text-4xl frame:text-[58px] frame:leading-none">Events Management</h2>
             <p className="mt-2 frame:mt-[16px] text-lime-brand font-medium text-sm frame:text-[19px]">We design and deliver immersive brand experiences that demand attention.</p>
           </div>
-          <a
-            href="#contact"
+          <button
+            type="button"
+            onClick={() => setModalOpen(true)}
             className="lime-btn inline-flex items-center justify-center rounded-full text-sm frame:text-[17px] font-bold px-6 py-3 frame:p-0 frame:h-[50px] frame:w-[219px]"
           >
             Learn More
-          </a>
+          </button>
         </div>
 
         <div className="panel-slider mt-8 frame:mt-[62px] min-w-0">
@@ -116,6 +119,7 @@ export default function Events() {
           />
         </div>
       </div>
-    </section>
+          <InquiryModal open={modalOpen} section="Events Management" onClose={() => setModalOpen(false)} />
+</section>
   )
 }

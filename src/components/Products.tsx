@@ -1,4 +1,8 @@
+import { useState } from 'react'
+import InquiryModal from './InquiryModal'
+
 export default function Products() {
+  const [modalOpen, setModalOpen] = useState(false)
   return (
     <section className="relative bg-white overflow-hidden border-b border-frame">
       {/* Yellow bloom top-right and green bloom along the foot, per the design. */}
@@ -27,15 +31,15 @@ export default function Products() {
             <p className="mt-6 frame:mt-[36px] text-ink/70 text-base frame:text-[19px] leading-relaxed frame:leading-[30px] max-w-[25rem] frame:max-w-[460px]">
               Central control panel for all your digital screens. Launch marketing and promotional content across all stores in 1 click.
             </p>
-            <a
-              href="#contact"
+            <button
+              type="button"
+              onClick={() => setModalOpen(true)}
               className="lime-btn mt-7 frame:mt-[38px] inline-flex items-center justify-center rounded-full font-bold text-base frame:text-[17px] px-[3.3rem] py-3.5 frame:p-0 frame:h-[52px] frame:w-[219px]"
-            >
-              Learn More
-            </a>
+            >Learn More</button>
           </div>
         </div>
       </div>
-    </section>
+          <InquiryModal open={modalOpen} section="Products" onClose={() => setModalOpen(false)} />
+</section>
   )
 }
